@@ -10,7 +10,7 @@ if (isset($_GET['lector'])) {
     if ($row_cnt > 0) {
         $row = $sql->fetch_array(MYSQLI_ASSOC);
         echo $row['nombre'].'<br/>';
-        echo $row['usada'];
+        echo $row['usada'] == 0;
     }
 
 }

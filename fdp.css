@@ -25,7 +25,7 @@ h1 {
 }
 
 input[type=text] {
-    width: 230px;;
+    width: 200px;
     padding: 20px;
     border: none;
     background: var(--color3);
@@ -67,3 +67,11 @@ input[type=submit] {
     font-size: 32px;
 }
 
+.downloads {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+}
+.downloads a {
+}
