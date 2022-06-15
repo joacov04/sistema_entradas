@@ -1,4 +1,12 @@
+<html>
+<head>
+<link rel="stylesheet" src="fdp.css"/>
+</head>
+
+
+</html>
 <?php
+
 include_once "connect.php";
 
 if (isset($_GET['lector'])) {
@@ -9,8 +17,8 @@ if (isset($_GET['lector'])) {
     $row_cnt = $sql->num_rows;
     if ($row_cnt > 0) {
         $row = $sql->fetch_array(MYSQLI_ASSOC);
-        echo $row['nombre'].'<br/>';
-        echo $row['usada'] == 0;
+        echo '<h1>'.$row['nombre'].'</h1><br/>';
+        echo $row['usada'];
     }
 
 }
