@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="fdp.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <title>Sistema QR</title>
+    <title>FDP</title>
 </head>
 <body>
     <script type="text/javascript">
@@ -36,7 +36,7 @@
         </script>
 
     <div>
-        <h1>Sistema QR</h1>
+        <h1>LA MALDITA FIESTA DEL POLI</h1>
         <form  method="post">                
             <div class="field_wrapper flex">
                 <div>

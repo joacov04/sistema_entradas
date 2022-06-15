@@ -4,6 +4,8 @@ import string
 import random
 import sys
 from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
 
 conn = mysql.connector.connect(host='localhost', database='entradas', user='fdp', password='fiestadelpolitecnico', auth_plugin='mysql_native_password')
 cursor = conn.cursor()
@@ -12,11 +14,14 @@ insertarEntrada = ("INSERT INTO fdp "
         "(token, nombre, usada) "
         "VALUES (%s, %s, %s)")
 
-def overlay(img_path):
+def overlay(img_path, token):
+    font = ImageFont.truetype(font='Calibri.ttf', size=35)
     background = Image.open('back.png')
     img1 = Image.open(img_path)
-    img1.paste(background, (0,0), mask=background)
-    img1.save(img_path)
+    background.paste(img1, (275,650))
+    i1 = ImageDraw.Draw(background)
+    i1.text((310,1015), token, font=font)
+    background.save(img_path)
 
 
 def makeQR(token, nombre):
@@ -44,6 +49,7 @@ def tokenAndSave(name:str):
         conn.commit()
         cursor.close()
         makeQR(tok, name)
+        overlay('qr/'+name+'.png', tok)
 
 tokenAndSave(sys.argv[1])
 
