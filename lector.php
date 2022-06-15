@@ -2,9 +2,8 @@
 <head>
 <link rel="stylesheet" src="fdp.css"/>
 </head>
+<body>
 
-
-</html>
 <?php
 
 include_once "connect.php";
@@ -25,3 +24,5 @@ if (isset($_GET['lector'])) {
 
 
 ?>
+</body>
+</html>
