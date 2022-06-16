@@ -15,12 +15,14 @@ insertarEntrada = ("INSERT INTO fdp "
         "VALUES (%s, %s, %s)")
 
 def overlay(img_path, token):
+    W, H = (898, 1150)
     font = ImageFont.truetype(font='Calibri.ttf', size=35)
     background = Image.open('back.png')
     img1 = Image.open(img_path)
     background.paste(img1, (275,650))
     i1 = ImageDraw.Draw(background)
-    i1.text((310,1015), token, font=font)
+    (w, h) = i1.textsize(token, font=font)
+    i1.text(((W-w)/2,1015), token, font=font)
     background.save(img_path)
 
 
