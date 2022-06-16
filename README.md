@@ -11,7 +11,7 @@ Sistema simple de control de asistencia para eventos
 - python3
 
 ## Configuración de la base de datos (CLI):
-1. Abrir mysql como root, crear la base de datos 'entradas' y el usuario 'fdp' (para configurar otro usuario ver credentials.inc)
+1. Abrir mysql como root, crear la base de datos 'entradas' y el usuario 'fdp'
 ```
 CREATE DATABASE entradas;
 CREATE USER 'fdp'@'%' IDENTIFIED BY 'pass';
@@ -27,6 +27,16 @@ token text,
 nombre text,
 usada boolean);
 ```
+4. Crear un archivo `credentials.inc` para php-mysql con el siguiente formato
+```
+<?php
+$user='fdp';
+$host='localhost';
+$pass='password';
+$base='entradas';
+?>
+```
+
 
 ## Instalacion de requqrimientos de python
 1. Ejecutar el siguiente comando
