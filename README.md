@@ -3,6 +3,11 @@
 ## Descripción
 Sistema simple de control de asistencia para eventos
 
+## ToDo List antes de hacer publico
+- [ ] Borrar el credentials.inc de aca
+- [ ] Meter todo en carpetas para que sea mas prolijo
+- [ ] Traducir readme a ingles si pinta
+
 ## Instalacion en servidor (linux):
 **Requerimientos**: 
 - apache2
