@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="flex">
-                <input type="submit" name="submit" value="ENVIAR">
+                <input type="submit" name="submit" value="GENERAR">
             </div>
         </form>
 
