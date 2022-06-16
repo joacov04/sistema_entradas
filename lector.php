@@ -1,8 +1,15 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" src="fdp.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lector.css">
+    <script src="jquery.js"></script>
+    <script src="lector.js"></script>
+    <title>Sistema QR</title>
 </head>
-<body>
+<body class="nousada" id="body">
 
 <?php
 
@@ -17,7 +24,9 @@ if (isset($_GET['lector'])) {
     if ($row_cnt > 0) {
         $row = $sql->fetch_array(MYSQLI_ASSOC);
         echo '<h1>'.$row['nombre'].'</h1><br/>';
-        echo $row['usada'];
+        echo "<h5 id='valor'>".$row['usada'].'</h5>';
+        echo "<h5 id='token'>".$token.'</h5>';
+        echo "<a id='boton'>USADA</a>";
     }
 
 }
