@@ -7,6 +7,7 @@ Sistema simple de control de asistencia para eventos
 - [ ] Borrar el credentials.inc de aca
 - [ ] Meter todo en carpetas para que sea mas prolijo
 - [ ] Traducir readme a ingles si pinta
+- [ ] Explicar brevemente el usage
 
 ## Instalacion en servidor (linux):
 **Requerimientos**: 
