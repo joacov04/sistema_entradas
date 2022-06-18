@@ -54,6 +54,9 @@ a {
     font-size: 32px;
 }
 
+a #search {
+    cursor: default;
+}
 input[type=submit] {
     width: 300px;
     font-weight: 700;
@@ -73,5 +76,8 @@ input[type=submit] {
     flex-direction: column;
     align-content: center;
 }
-.downloads a {
+
+#qr {
+    margin-top: auto;
+
 }
