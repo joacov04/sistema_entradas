@@ -27,6 +27,9 @@ if (isset($_GET['lector'])) {
         echo "<h5 id='valor'>".$row['usada'].'</h5>';
         echo "<h5 id='token'>".$token.'</h5>';
         echo "<a id='boton'>USADA</a>";
+    } else {
+        echo "<h1 id='invalid'>ENTRADA INVALIDA</h1>";
+        echo "<h3>PROCEDE PATADA EN EL CULO</h3>";
     }
 
 }

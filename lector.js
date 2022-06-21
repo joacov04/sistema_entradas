@@ -6,6 +6,12 @@ $(document).ready(function () {
         $('#body').addClass('usada');
         $('#boton').hide();
     }
+    let invalid = $('#invalid').text();
+    if(invalid) {
+        $('#body').addClass('usada');
+        $('#boton').hide();
+
+    }
     $('#boton').click(function () {
         let token = $('#token').text();
         $.ajax({
