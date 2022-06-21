@@ -1,7 +1,6 @@
 $(document).ready(function () {
     let valor = $('#valor').text();
     if (valor == 0) {
-        console.log("es 0");
     } else {
         $('#body').addClass('usada');
         $('#boton').hide();
