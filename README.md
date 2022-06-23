@@ -59,5 +59,9 @@ mkdir qr qrUsados
 Si realizaste todos los pasos anteriores ya deberias poder utilizar el sistema.
 
 ## Para tener en cuenta
-Es buena práctica usar el mod de apache BasicAuth para que solo el administrador tenga acceso para crear entradas 
+1. Es buena práctica usar el mod de apache BasicAuth para que solo el administrador tenga acceso para crear entradas 
 y también para que no se puedan marcar como usadas las entradas antes del evento en cuestión.
+
+2. Si se utiliza el spreadsheets de google docs, hay un archivo `api.php` para importar con la funcion `=IMPORTDATA()`
+y tener la cantidad de QR's que fueron generados. La url a utilizar seria `http://server.com/dir_entradas/api.php`
+
