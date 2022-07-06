@@ -4,7 +4,7 @@
 Sistema simple de control de asistencia para eventos
 
 ## ToDo List antes de hacer publico
-- [ ] Borrar el credentials.inc de aca
+- [ ] Borrar el credentials.inc de aca y cambiar contraseñas
 - [ ] Meter todo en carpetas para que sea mas prolijo
 - [ ] Traducir readme a ingles si pinta
 - [ ] Explicar brevemente el usage
