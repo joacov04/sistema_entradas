@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="lector.css">
-    <script src="jquery.js"></script>
-    <script src="lector.js"></script>
+    <link rel="stylesheet" href="style/lector.css">
+    <script src="src/jquery.js"></script>
+    <script src="src/lector.js"></script>
     <title>Sistema QR</title>
 </head>
 <body class="nousada" id="body">
