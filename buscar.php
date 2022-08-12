@@ -23,7 +23,7 @@
             </div>
         </form>
         <?php
-            include("browse.php");
+            include("backend_buscar.php");
         ?>
 
     </div>
