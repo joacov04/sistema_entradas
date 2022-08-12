@@ -5,7 +5,7 @@ Sistema simple de control de asistencia para eventos
 
 ## ToDo List antes de hacer publico
 - [ ] Hacer un boton en algun lado (accesible solo con contraseña) que permita que cualquier telefono pueda escanear qrs (para el dia del evento ultima hora)
-- [ ] Borrar el credentials.inc de aca y cambiar contraseñas
+- [X] Borrar el credentials.inc de aca y cambiar contraseñas
 - [ ] Meter todo en carpetas para que sea mas prolijo
 - [ ] Traducir readme a ingles si pinta
 - [ ] Explicar brevemente el usage
