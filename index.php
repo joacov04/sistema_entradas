@@ -36,7 +36,7 @@
         </script>
 
     <div>
-        <h1>LA MALDITA FIESTA DEL POLI</h1>
+        <h1>ENTRADAS</h1>
         <form  method="post">                
             <div class="field_wrapper flex">
                 <div>
