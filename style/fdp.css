@@ -7,6 +7,14 @@
     --color4: #f56038;
     --color5: #f56038;
     --color6: #f7a325;
+    /*
+    --color1: #361d32;
+    --color2: #edd2cb;
+    --color3: #edd2cb;
+    --color4: #f55951;
+    --color5: #f55951;
+    --color6: #f55951;
+ */
 }
 
 body {
@@ -83,4 +91,9 @@ input[type=submit] {
 #qr {
     margin-top: auto;
 
+}
+
+#bottom-link {
+    font-size: 20px;
+    background-color: transparent;
 }
