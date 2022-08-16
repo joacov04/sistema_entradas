@@ -1,6 +1,6 @@
 <?php
 $file = basename($_GET['file']);
-$file = 'qr/'.$file;
+$file = '../qr/'.$file;
 
 if(!file_exists($file)){ // file does not exist
     die('file not found');

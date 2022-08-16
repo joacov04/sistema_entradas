@@ -1,5 +1,5 @@
 <?php
-include_once "connect.php";
+include_once "../app/connect.php";
 
 
 $cant_query = $conn->query("SELECT * FROM fdp");

@@ -14,7 +14,7 @@ $(document).ready(function () {
     $('#boton').click(function () {
         let token = $('#token').text();
         $.ajax({
-            url: "usada.php",
+            url: "app/usada.php",
             method: "get",
             data: {
                 "token": token

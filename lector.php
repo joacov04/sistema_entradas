@@ -13,7 +13,7 @@
 
 <?php
 
-include_once "connect.php";
+include_once "app/connect.php";
 
 if (isset($_GET['lector'])) {
     $token = mysqli_real_escape_string($conn, $_GET['lector']);

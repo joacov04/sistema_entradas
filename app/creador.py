@@ -16,8 +16,8 @@ insertarEntrada = ("INSERT INTO fdp "
 
 def overlay(img_path, token):
     W, _ = (898, 1150)
-    font = ImageFont.truetype(font='Calibri.ttf', size=35)
-    background = Image.open('back.png')
+    font = ImageFont.truetype(font='app/Calibri.ttf', size=35)
+    background = Image.open('app/back.png')
     img1 = Image.open(img_path)
     background.paste(img1, (275,650))
     i1 = ImageDraw.Draw(background)

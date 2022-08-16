@@ -2,8 +2,9 @@
 function cleanDir($dir) {
     if($handle = opendir($dir)) {
         while (false !== ($entry = readdir($handle))) {
-            if ($entry != "." && $entry != "..") {
-                system('mv '.$dir.$entry.' qrUsados/');
+            if ($entry != ".") {
+                echo system("pwd").'<br>';
+                system('mv '.$dir.$entry.' qrUsados');
             }
         }
         closedir($handle);
@@ -15,13 +16,13 @@ if(isset($_POST['submit'])){
     cleanDir('qr/');
     foreach($field_values_array as &$element) {
         $nombre = str_replace(' ', '_', $element);
-        system('python3 creador.py '.$nombre);
+        system('python3  app/creador.py '.$nombre);
     }
     if($handle = opendir('qr/')) {
         echo "<div class='downloads'>";
         while (false !== ($entry = readdir($handle))){
              if($entry != '.' && $entry != '..') {
-                echo "<a class='qrs' href='download.php?file=".$entry."'>".$entry."</a> \n";
+                echo "<a class='qrs' href='app/download.php?file=".$entry."'>".$entry."</a> \n";
              }
         }
         echo "</div>";
