@@ -29,7 +29,6 @@ if (isset($_GET['lector'])) {
         echo "<a id='boton'>USADA</a>";
     } else {
         echo "<h1 id='invalid'>ENTRADA INVALIDA</h1>";
-        echo "<h3>PROCEDE PATADA EN EL CULO</h3>";
     }
 
 }
