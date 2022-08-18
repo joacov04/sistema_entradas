@@ -6,6 +6,10 @@ import sys
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
+# to do de aca
+# agarrar datos de la db desde el connect o desde un .env
+# cambiar la funcion overlay para que funcione con cualquier resolucion
+# que se pueda usar cualquier foto en vez de solo la que se llama back.png
 
 conn = mysql.connector.connect(host='localhost', database='entradas', user='fdp', password='fiestadelpolitecnico', auth_plugin='mysql_native_password')
 cursor = conn.cursor()
@@ -19,10 +23,10 @@ def overlay(img_path, token):
     font = ImageFont.truetype(font='app/Calibri.ttf', size=35)
     background = Image.open('app/back.png')
     img1 = Image.open(img_path)
-    background.paste(img1, (275,650))
+    background.paste(img1, (275, 650))
     i1 = ImageDraw.Draw(background)
     (w, _) = i1.textsize(token, font=font)
-    i1.text(((W-w)/2,1015), token, font=font)
+    i1.text(((W-w)/2, 1015), token, font=font)
     background.save(img_path)
 
 

@@ -3,7 +3,6 @@ function cleanDir($dir) {
     if($handle = opendir($dir)) {
         while (false !== ($entry = readdir($handle))) {
             if ($entry != ".") {
-                echo system("pwd").'<br>';
                 system('mv '.$dir.$entry.' qrUsados');
             }
         }
