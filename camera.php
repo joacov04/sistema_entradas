@@ -14,14 +14,14 @@
     <video id="preview"></video>
     <input type="text" placeholder="scan" id="text"></input>
     <script type="text/javascript">
-      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+      let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), mirror: false });
       scanner.addListener('scan', function (content) {
         console.log(content);
         document.getElementById("text").value = content;
       });
       Instascan.Camera.getCameras().then(function (cameras) {
         if (cameras.length > 0) {
-          scanner.start(cameras[0]);
+          scanner.start(cameras[2]);
         } else {
           console.error('No cameras found.');
         }
