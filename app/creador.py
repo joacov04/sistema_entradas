@@ -1,8 +1,8 @@
-import qrcode
-import mysql.connector
 import string
 import random
 import sys
+import qrcode
+import mysql.connector
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
