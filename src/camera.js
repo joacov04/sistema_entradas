@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $("#cameras").change(function () {
     let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), mirror: false });
     scanner.addListener('scan', function (content) {
         console.log(content);
@@ -27,5 +28,6 @@ $(document).ready(function () {
         }
         }).catch(function (e) {
         console.error(e);
+        });
     });
 });
