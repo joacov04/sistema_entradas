@@ -14,8 +14,12 @@ $(document).ready(function () {
 
             });
             console.log(cameras);
-            scanner.start(cameras[0]);
-            
+            let selected = $("#cameras").find((":selected")).text();
+            cameras.forEach(camera => {
+                if(camera.name == selected){
+                    scanner.start(camera);
+                }
+            });
         } else {
           console.error('No cameras found.');
         }
