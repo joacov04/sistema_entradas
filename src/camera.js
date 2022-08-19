@@ -16,7 +16,9 @@ $(document).ready(function () {
             console.log(cameras);
             let selected = $("#cameras").find((":selected")).text();
             cameras.forEach(camera => {
-                if(camera.name == selected){
+                console.log(camera.name);
+                console.log(selected);
+                if(selected.includes(camera.name)){
                     scanner.start(camera);
                 }
             });
