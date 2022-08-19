@@ -1,4 +1,4 @@
-$(document).ready(function cameraStart() {
+function ready() {
     let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), mirror: false });
     scanner.addListener('scan', function (content) {
         console.log(content);
@@ -28,9 +28,11 @@ $(document).ready(function cameraStart() {
         }).catch(function (e) {
         console.error(e);
     });
-});
 
+}
+
+$(document).ready(ready)
 $("#cameras").change(function () {
-    cameraStart();
+    ready();
 
 })
