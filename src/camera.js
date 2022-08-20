@@ -35,7 +35,6 @@ function ready(being_called=0) {
 
 $(document).ready(ready(being_called=0))
 $("#cameras").change(function () {
-    scanner.stop();
     ready(being_called=1);
 
 })
