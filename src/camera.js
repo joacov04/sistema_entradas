@@ -3,6 +3,7 @@ function ready(being_called=0) {
     scanner.addListener('scan', function (content) {
         console.log(content);
         $('#text').val(content)
+        alert(content);
     });
         Instascan.Camera.getCameras().then(function (cameras) {
             if(being_called == 0) {
@@ -36,5 +37,4 @@ function ready(being_called=0) {
 $(document).ready(ready(being_called=0))
 $("#cameras").change(function () {
     ready(being_called=1);
-
 })
