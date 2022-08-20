@@ -1,6 +1,7 @@
 function ready(being_called=0) {
     let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), mirror: false });
     scanner.addListener('scan', function (content) {
+        // seems like it scans twice. check.
         console.log(content);
         $('#text').val(content)
         alert(content);
