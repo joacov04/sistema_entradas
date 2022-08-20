@@ -15,18 +15,18 @@ function ready(being_called=0) {
 
                     });
                     console.log(cameras);
-                    let selected = $("#cameras").find((":selected")).text();
-                    cameras.forEach(camera => {
-                        console.log(camera.name);
-                        console.log(selected);
-                        if(selected.includes(camera.name)){
-                            scanner.start(camera);
-                        }
-                    });
                 } else {
                   console.error('No cameras found.');
                 }
             }
+            let selected = $("#cameras").find((":selected")).text();
+            cameras.forEach(camera => {
+                console.log(camera.name);
+                console.log(selected);
+                if(selected.includes(camera.name)){
+                    scanner.start(camera);
+                }
+            });
         }).catch(function (e) {
         console.error(e);
     });
