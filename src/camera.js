@@ -33,6 +33,7 @@ function ready() {
 
 $(document).ready(ready)
 $("#cameras").change(function () {
+    scanner.stop();
     ready();
 
 })
