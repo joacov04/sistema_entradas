@@ -1,39 +1,41 @@
-function ready() {
+function ready(being_called=0) {
     let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), mirror: false });
     scanner.addListener('scan', function (content) {
         console.log(content);
         $('#text').val(content)
     });
         Instascan.Camera.getCameras().then(function (cameras) {
-        if (cameras.length > 0) {
-            cameras.forEach(camera => {
-                $('#cameras').append(`<option value="${camera.name}">
-                                       ${camera.name}
-                                  </option>`);
-                console.log(camera.id);
+            if(being_called == 0) {
+                if (cameras.length > 0) {
+                    cameras.forEach(camera => {
+                        $('#cameras').append(`<option value="${camera.name}">
+                                               ${camera.name}
+                                          </option>`);
+                        console.log(camera.id);
 
-            });
-            console.log(cameras);
-            let selected = $("#cameras").find((":selected")).text();
-            cameras.forEach(camera => {
-                console.log(camera.name);
-                console.log(selected);
-                if(selected.includes(camera.name)){
-                    scanner.start(camera);
+                    });
+                    console.log(cameras);
+                    let selected = $("#cameras").find((":selected")).text();
+                    cameras.forEach(camera => {
+                        console.log(camera.name);
+                        console.log(selected);
+                        if(selected.includes(camera.name)){
+                            scanner.start(camera);
+                        }
+                    });
+                } else {
+                  console.error('No cameras found.');
                 }
-            });
-        } else {
-          console.error('No cameras found.');
-        }
+            }
         }).catch(function (e) {
         console.error(e);
     });
 
 }
 
-$(document).ready(ready)
+$(document).ready(ready(being_called=0))
 $("#cameras").change(function () {
     scanner.stop();
-    ready();
+    ready(being_called=1);
 
 })
