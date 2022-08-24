@@ -1,10 +1,10 @@
+$(document).ready(function() {
+    ready(being_called=0)
+    onCameraUpdate();
+});
+
 function ready(being_called=0) {
     let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), mirror: false });
-    scanner.addListener('scan', function (content) {
-        // seems like it scans twice. check.
-        $('#text').text(content);
-        alert(content);
-    });
         Instascan.Camera.getCameras().then(function (cameras) {
             if(being_called == 0) {
                 if (cameras.length > 0) {
@@ -27,10 +27,15 @@ function ready(being_called=0) {
         }).catch(function (e) {
         console.error(e);
     });
+    scanner.addListener('scan', function (content) {
+        // seems like it scans twice. check.
+        $('#text').html(content);
+    });
 
 }
 
-$(document).ready(ready(being_called=0))
-$("#cameras").change(function () {
-    ready(being_called=1);
-})
+function onCameraUpdate() {
+    $("#cameras").change(function () {
+        ready(being_called=1);
+    })
+}
