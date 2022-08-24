@@ -12,7 +12,7 @@
 </head>
 <body>
     <video id="preview"></video>
-    <h3 id="text">Scan QR</h3>
+    <h2 id="text">Scan QR</h2>
     <select name="cameras" id="cameras">
     </select> 
     <script type="text/javascript" src="src/camera.js"></script>
