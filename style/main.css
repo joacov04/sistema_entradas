@@ -35,6 +35,10 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: 32px;
+}
+
 input[type=text] {
     width: 200px;
     padding: 20px;
@@ -96,4 +100,29 @@ input[type=submit] {
 #bottom-link {
     font-size: 20px;
     background-color: transparent;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: var(--color3);
+    text-align: center;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+select {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    background-color: #f56038;
+    border: none;
+    border-radius: 10px;
+    padding: 9px;
+    top: 30px;
+    right: 20px;
+    content: "";
 }

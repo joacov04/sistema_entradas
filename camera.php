@@ -10,9 +10,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Generar entradas</title>
 </head>
-<body>
-    <video id="preview"></video>
+<body class="flex">
     <h2 id="text">Scan QR</h2>
+    <video id="preview"></video>
+    <p>Seleccionar una de las opciones<p>
     <select name="cameras" id="cameras">
     </select> 
     <script type="text/javascript" src="src/camera.js"></script>
