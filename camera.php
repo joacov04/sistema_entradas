@@ -12,7 +12,7 @@
 </head>
 <body>
     <video id="preview"></video>
-    <input type="text" placeholder="scan" id="text"></input>
+    <h3 id="text">Scan QR</h3>
     <select name="cameras" id="cameras">
     </select> 
     <script type="text/javascript" src="src/camera.js"></script>
