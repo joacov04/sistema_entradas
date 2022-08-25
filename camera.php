@@ -16,6 +16,9 @@
     <p>Seleccionar una de las opciones<p>
     <select name="cameras" id="cameras">
     </select> 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <a id="bottom-link" target="_blank" href="https://github.com/joacov04/sistema_entradas"><i class="fa fa-github" style="font-size:24px"></i> Página oficial</a>
+    
     <script type="text/javascript" src="src/camera.js"></script>
   </body>
 </html>
