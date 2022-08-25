@@ -18,12 +18,12 @@ insertarEntrada = ("INSERT INTO fdp "
         "(token, nombre, usada) "
         "VALUES (%s, %s, %s)")
 
-def overlay(img_path, token):
+def overlay(qr_path, token):
     font = ImageFont.truetype(font='app/Calibri.ttf', size=35)
     background = Image.open('app/back.png')
     (background_width, background_heigth) = background.size
 
-    qr_img = Image.open(img_path)
+    qr_img = Image.open(qr_path)
     (qr_width, qr_heigth) = qr_img.size
     heigth_to_paste = int(background_heigth/2)
     width_to_paste = int((background_width-qr_width)/2)
@@ -35,7 +35,7 @@ def overlay(img_path, token):
             ((background_width-text_width)/2, heigth_to_paste+qr_heigth+2),
             token, font=font)
 
-    background.save(img_path)
+    background.save(qr_path)
 
 
 def makeQR(token, nombre):
