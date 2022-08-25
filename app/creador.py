@@ -23,10 +23,13 @@ def overlay(img_path, token):
     background = Image.open('app/back.png')
     (W, H) = background.size
     img1 = Image.open(img_path)
-    background.paste(img1, (int(W/3), int(H/2)))
+    (qr_width, qr_heigth) = img1.size
+    heigth_to_paste = int(H/2)
+    width_to_paste = int((W-qr_width)/2)
+    background.paste(img1, (width_to_paste, heigth_to_paste))
     i1 = ImageDraw.Draw(background)
     w = i1.textlength(token, font=font)
-    i1.text(((W-w)/2, (H/3)*2), token, font=font)
+    i1.text(((W-w)/2, heigth_to_paste+qr_heigth+2), token, font=font)
     background.save(img_path)
 
 
