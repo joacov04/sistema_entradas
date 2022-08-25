@@ -21,15 +21,20 @@ insertarEntrada = ("INSERT INTO fdp "
 def overlay(img_path, token):
     font = ImageFont.truetype(font='app/Calibri.ttf', size=35)
     background = Image.open('app/back.png')
-    (W, H) = background.size
-    img1 = Image.open(img_path)
-    (qr_width, qr_heigth) = img1.size
-    heigth_to_paste = int(H/2)
-    width_to_paste = int((W-qr_width)/2)
-    background.paste(img1, (width_to_paste, heigth_to_paste))
-    i1 = ImageDraw.Draw(background)
-    w = i1.textlength(token, font=font)
-    i1.text(((W-w)/2, heigth_to_paste+qr_heigth+2), token, font=font)
+    (background_width, background_heigth) = background.size
+
+    qr_img = Image.open(img_path)
+    (qr_width, qr_heigth) = qr_img.size
+    heigth_to_paste = int(background_heigth/2)
+    width_to_paste = int((background_width-qr_width)/2)
+
+    background.paste(qr_img, (width_to_paste, heigth_to_paste))
+    draw_object = ImageDraw.Draw(background)
+    text_width = draw_object.textlength(token, font=font)
+    draw_object.text(
+            ((background_width-text_width)/2, heigth_to_paste+qr_heigth+2),
+            token, font=font)
+
     background.save(img_path)
 
 
