@@ -16,36 +16,21 @@ connection_file = open("app/credentials.inc", "r")
 
 password, user, base, host = "", "", "", ""
 
+credentials = {"user": "", "pass": "", "base": "", "host": ""}
 for word in connection_file:
-    if re.search("pass", word):
-        if "'" in word:
-            password = word.split("'")[1]
-        else:
-            password = word.split("\"")[1]
+    for key in credentials:
+        if re.search(key, word):
+            if "'" in word:
+                credentials[key] = word.split("'")[1]
+            else:
+                credentials[key] = word.split("\"")[1]
 
-    if re.search("user", word):
-        if "'" in word:
-            user = word.split("'")[1]
-        else:
-            user = word.split("\"")[1]
-
-    if re.search("base", word):
-        if "'" in word:
-            base = word.split("'")[1]
-        else:
-            base = word.split("\"")[1]
-
-    if re.search("host", word):
-        if "'" in word:
-            host = word.split("'")[1]
-        else:
-            host = word.split("\"")[1]
-
+print(credentials)
 conn = mysql.connector.connect(
-        host=host,
-        database=base,
-        user=user,
-        password=password,
+        host=credentials["host"],
+        database=credentials["base"],
+        user=credentials["user"],
+        password=credentials["pass"],
         auth_plugin='mysql_native_password')
 
 cursor = conn.cursor()
