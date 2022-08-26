@@ -14,7 +14,6 @@ from PIL import ImageFont
 
 connection_file = open("app/credentials.inc", "r")
 
-password, user, base, host = "", "", "", ""
 
 credentials = {"user": "", "pass": "", "base": "", "host": ""}
 for word in connection_file:
@@ -25,7 +24,6 @@ for word in connection_file:
             else:
                 credentials[key] = word.split("\"")[1]
 
-print(credentials)
 conn = mysql.connector.connect(
         host=credentials["host"],
         database=credentials["base"],
