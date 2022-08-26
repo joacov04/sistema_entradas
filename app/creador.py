@@ -8,8 +8,6 @@ from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 # to do de aca
-# agarrar datos de la db desde el connect o desde un .env
-# cambiar la funcion overlay para que funcione con cualquier resolucion
 # que se pueda usar cualquier foto en vez de solo la que se llama back.png
 
 connection_file = open("app/credentials.inc", "r")
