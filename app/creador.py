@@ -1,6 +1,7 @@
 import string
 import random
 import sys
+import re
 import qrcode
 import mysql.connector
 from PIL import Image
@@ -11,12 +12,47 @@ from PIL import ImageFont
 # cambiar la funcion overlay para que funcione con cualquier resolucion
 # que se pueda usar cualquier foto en vez de solo la que se llama back.png
 
-conn = mysql.connector.connect(host='localhost', database='entradas', user='fdp', password='fiestadelpolitecnico', auth_plugin='mysql_native_password')
+connection_file = open("app/credentials.inc", "r")
+
+password, user, base, host = "", "", "", ""
+
+for word in connection_file:
+    if re.search("pass", word):
+        if "'" in word:
+            password = word.split("'")[1]
+        else:
+            password = word.split("\"")[1]
+
+    if re.search("user", word):
+        if "'" in word:
+            user = word.split("'")[1]
+        else:
+            user = word.split("\"")[1]
+
+    if re.search("base", word):
+        if "'" in word:
+            base = word.split("'")[1]
+        else:
+            base = word.split("\"")[1]
+
+    if re.search("host", word):
+        if "'" in word:
+            host = word.split("'")[1]
+        else:
+            host = word.split("\"")[1]
+
+conn = mysql.connector.connect(
+        host=host,
+        database=base,
+        user=user,
+        password=password,
+        auth_plugin='mysql_native_password')
+
 cursor = conn.cursor()
 
 insertarEntrada = ("INSERT INTO fdp "
-        "(token, nombre, usada) "
-        "VALUES (%s, %s, %s)")
+                   "(token, nombre, usada) "
+                   "VALUES (%s, %s, %s)")
 
 def overlay(qr_path, token):
     font = ImageFont.truetype(font='app/Calibri.ttf', size=35)
