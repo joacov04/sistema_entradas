@@ -49,7 +49,7 @@ def overlay(qr_path, token):
     draw_object = ImageDraw.Draw(background)
     text_width = draw_object.textlength(token, font=font)
     draw_object.text(
-            ((background_width-text_width)/2, heigth_to_paste+qr_heigth+2),
+            ((background_width-text_width)/2, heigth_to_paste+qr_heigth+4),
             token, font=font)
 
     background.save(qr_path)
