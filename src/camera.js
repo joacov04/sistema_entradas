@@ -30,7 +30,9 @@ function ready(being_called=0) {
     scanner.addListener('scan', function (content) {
         // seems like it scans twice. check.
         $('#text').html(content);
+        window.location.href = content.split("/")[4];
     });
+
 
 }
 
