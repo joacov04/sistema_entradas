@@ -28,17 +28,19 @@ function ready(being_called=0) {
         console.error(e);
     });
     scanner.addListener('scan', function (content) {
-        $.ajax({
-            type: 'GET',
-            url: content.split('/')[4],
+//        $.ajax({
+//            type: 'GET',
+//            url: content.split('/')[4],
+//
+//            success: function(data) {
+//                $('body').html(data);
+//            },
+//            error: function(data) {
+//                console.log(data);
+//            },
+//        });
 
-            success: function(data) {
-                $('body').html(data);
-            },
-            error: function(data) {
-                console.log(data);
-            },
-        });
+        window.open(content.split("/")[4]);
         $('#text').html(content);
     });
 
