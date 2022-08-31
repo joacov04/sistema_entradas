@@ -28,14 +28,16 @@ function ready(being_called=0) {
         console.error(e);
     });
     scanner.addListener('scan', function (content) {
-        // seems like it scans twice. check.
         $.ajax({
             type: 'GET',
             url: content.split('/')[4],
-        }).done(function(data) {
-            $('body').html(data);
-        }).error(function(error) {
-            console.log(error);
+
+            success: function(data) {
+                $('body').html(data);
+            },
+            error: function(data) {
+                console.log(data);
+            },
         });
         $('#text').html(content);
     });
