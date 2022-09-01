@@ -51,6 +51,8 @@ function ready(being_called=0) {
                     $('#modal_usada').html(token_info.usada);
                 } else {
                     $('#modal_name').html("ENTRADA INVALIDA");
+                    $('#modal_token').html("");
+                    $('#modal_usada').html("");
                     $('.modal').css({"display": "block", "background-color": "red"});
                 }
             },
