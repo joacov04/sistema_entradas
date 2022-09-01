@@ -45,10 +45,22 @@ function ready(being_called=0) {
                 if(data != 2) {
                     token_info = JSON.parse(data);
                     token_info.usada == 1 ? color = "red" : color = "green";
+                    token_info.usada == 1 ? msg = "Entrada ya utilizada." : msg = "OK";
                     $('.modal').css({"display": "block", "background-color": color});
                     $('#modal_name').html(token_info.nombre);
                     $('#modal_token').html(token_info.token);
-                    $('#modal_usada').html(token_info.usada);
+                    $('#modal_usada').html(msg);
+                    $.ajax({
+                        type: 'GET',
+                        url: 'app/usada.php?token='+token,
+                        success: function(data) {
+                            console.log("entrada usada: "+ data);
+                        },
+                        error: function(err) {
+                            console.log(err);
+                        }
+                    });
+
                 } else {
                     $('#modal_name').html("ENTRADA INVALIDA");
                     $('#modal_token').html("");
