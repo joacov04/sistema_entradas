@@ -21,6 +21,7 @@
 }
 
 #lupa {
+    margin-right: 15px;
 }
 #camera {
     margin-right: 15px;
@@ -42,7 +43,7 @@
     cursor: pointer;
 }
 img {
-    width: 7%;
+    width: 60px;
     display: inline-block;
     margin: auto;
 }
