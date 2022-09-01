@@ -65,7 +65,7 @@ function ready(being_called=0) {
                     $('#modal_name').html("ENTRADA INVALIDA");
                     $('#modal_token').html("");
                     $('#modal_usada').html("");
-                    $('.modal').css({"display": "block", "background-color": "red"});
+                    $('.modal').css({"display": "block", "background-color": "var(--softRed)"});
                 }
             },
             error: function(data) {
