@@ -19,6 +19,10 @@
     --color6: #f55951;
  */
 }
+p #modal_name {
+    font-size: 55px;
+    color: white;
+}
 .modal {
     background-color: var(--softRed);
     color: var(--color8);
@@ -28,11 +32,13 @@
     top: 12%;
     z-index:1;
     width:85%;
+    border: 2px solid #000;
 }
 
 .modal p {
     color: var(--color8);
 }
+
 
 body {
     background-color: var(--color1);

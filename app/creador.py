@@ -31,9 +31,9 @@ conn = mysql.connector.connect(
 
 cursor = conn.cursor()
 
-insertarEntrada = ("INSERT INTO fdp "
-                   "(token, nombre, usada) "
-                   "VALUES (%s, %s, %s)")
+INSERTAR_ENTRADA = ("INSERT INTO fdp "
+                    "(token, nombre, usada, vendedor) "
+                    "VALUES (%s, %s, %s, %s)")
 
 def overlay(qr_path, token):
     font = ImageFont.truetype(font='app/Calibri.ttf', size=35)
@@ -63,28 +63,28 @@ def makeQR(token, nombre):
     img_name = nombre.replace(' ', '_')
     img.save('qr/'+img_name+'.png')
 
-def tokenAndSave(name:str):
+def tokenAndSave(name: str, seller: str):
 
     letters = string.ascii_uppercase
     tok = ''.join(random.choice(letters) for _ in range(15))
 
-
     cursor.execute("SELECT * FROM fdp WHERE token='%s'"%tok)
     if cursor.rowcount > 0:
         cursor.close()
-        tokenAndSave(name)
-    else: 
+        tokenAndSave(name, seller)
+    else:
         cursor.fetchall()
-        entradaDatos = (tok, name.replace('_', ' '), "0")
-        cursor.execute(insertarEntrada, entradaDatos)
+        entrada_datos = (tok, name.replace('_', ' '), "0", seller)
+        cursor.execute(INSERTAR_ENTRADA, entrada_datos)
         conn.commit()
         cursor.close()
         makeQR(tok, name)
         overlay('qr/'+name+'.png', tok)
 
-tokenAndSave(sys.argv[1])
+
+tokenAndSave(sys.argv[1], sys.argv[2])
 
 conn.close()
-#for(token, nombre, usada) in cursor:
+# for(token, nombre, usada) in cursor:
 #    print(token, type(token))
 #    print(f'{token} nombre:{nombre}, usada:{usada}')

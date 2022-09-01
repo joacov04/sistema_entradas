@@ -10,6 +10,9 @@
     <title>Generar entradas</title>
 </head>
 <body>
+<?php
+echo $_SERVER['PHP_AUTH_USER'];
+?>
     <script type="text/javascript">
         $(document).ready(function(){
             var maxField = 20; //Input fields increment limitation
