@@ -19,6 +19,14 @@
     --color6: #f55951;
  */
 }
+
+#lupa {
+    width: 3%;
+    display: block;
+    margin: auto;
+
+}
+
 p #modal_name {
     font-size: 55px;
     color: white;
