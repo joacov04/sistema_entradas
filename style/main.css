@@ -21,11 +21,32 @@
 }
 
 #lupa {
-    width: 3%;
+}
+#camera {
+    margin-right: 15px;
+}
+
+#imgs {
     display: block;
     margin: auto;
-
+    margin-bottom:10%;
 }
+
+#a_lupa {
+    all: initial;
+    cursor: pointer;
+}
+
+#a_camara {
+    all: initial;
+    cursor: pointer;
+}
+img {
+    width: 7%;
+    display: inline-block;
+    margin: auto;
+}
+
 
 p #modal_name {
     font-size: 55px;
@@ -61,7 +82,7 @@ body {
 }
 
 h1 {
-    margin: 80px 10px;
+    margin: 10px 10px;
     font-size: 56px;
     text-align: center;
 }
