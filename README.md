@@ -5,10 +5,7 @@ Sistema simple de control de asistencia para eventos
 
 ## ToDo List
 - [ ] Hacer un boton en algun lado (accesible solo con contraseña) que permita que cualquier telefono pueda escanear qrs (para el dia del evento ultima hora)
-- [ ] Meter todo en carpetas para que sea mas prolijo
-- [ ] Traducir esto a ingles
 - [ ] start.sh o algo similar (dominio + imagen fondo)
-- [ ] Explicar brevemente el usage
 
 ## Instalacion en servidor (linux):
 **Requerimientos**: 
