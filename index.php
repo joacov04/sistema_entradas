@@ -15,7 +15,7 @@
 
     <div>
         <h1>ENTRADAS</h1>
-        <div id="imgs">
+        <div id="imgs" class="flex">
             <a id="a_camara" href="camera.php"><img src="img/camera.png" id="camera"></a>
             <a id="a_lupa" href="buscar.php"><img src="img/lupa.png" id="lupa"></a>
         </div>
