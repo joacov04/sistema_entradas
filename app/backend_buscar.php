@@ -13,10 +13,11 @@ if(isset($_POST['nombre']))
         $nombre_encontrado = $row['nombre'];
         $token = $row['token'];
         $entrada_usada = $row['usada'];
+        $vendedor = $row['vendedor'];
         if($entrada_usada == 1) {
             $valida = "Entrada no válida";
         } else $valida = "Entrada válida";
-        echo "<a id='search'>".$nombre_encontrado." - ".$token." - ".$valida." </a>";
+        echo "<a id='search'>".$nombre_encontrado." - ".$token." - ".$valida." - Vendedor: ".$vendedor." </a>";
     } else echo "No se encontro el nombre";
 
 $cant_query = $conn->query("SELECT * FROM fdp");
