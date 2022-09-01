@@ -7,6 +7,9 @@
     --color4: #f56038;
     --color5: #f56038;
     --color6: #f7a325;
+    --softGreen: #7ec281;
+    --softRed: #cb4242;
+    --color8: #03171a;
     /*
     --color1: #361d32;
     --color2: #edd2cb;
@@ -17,10 +20,14 @@
  */
 }
 .modal {
-    background-color: red;
-    color: black;
-    border-radius:45px;
+    background-color: var(--softRed);
+    color: var(--color8);
+    border-radius:85px;
     padding:2%;
+    position: fixed;
+    top: 12%;
+    z-index:1;
+    width:50%;
 }
 
 body {

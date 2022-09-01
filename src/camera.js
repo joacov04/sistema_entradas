@@ -43,7 +43,7 @@ function ready(being_called=0) {
             success: function(data) {
                 if(data != 2) {
                     token_info = JSON.parse(data);
-                    token_info.usada == 1 ? color = "red" : color = "green";
+                    token_info.usada == 1 ? color = "var(--softRed)" : color = "var(--softGreen)";
                     token_info.usada == 1 ? msg = "Entrada ya utilizada." : msg = "OK";
                     $('.modal').css({"display": "block", "background-color": color});
                     $('#modal_name').html(token_info.nombre);
