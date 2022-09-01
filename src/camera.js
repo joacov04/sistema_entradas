@@ -1,9 +1,16 @@
 $(document).ready(function() {
     ready(being_called=0)
     onCameraUpdate();
+    $('.modal').click(function() {
+        $('.modal').css('display', 'none');
+    });
+    $('body').click(function() {
+        $('.modal').css('display', 'none');
+    });
 });
 
 function ready(being_called=0) {
+    $('.modal').css("display", "none");
     let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), mirror: false });
         Instascan.Camera.getCameras().then(function (cameras) {
             if(being_called == 0) {
@@ -28,20 +35,30 @@ function ready(being_called=0) {
         console.error(e);
     });
     scanner.addListener('scan', function (content) {
-//        $.ajax({
-//            type: 'GET',
-//            url: content.split('/')[4],
-//
-//            success: function(data) {
-//                $('body').html(data);
-//            },
-//            error: function(data) {
-//                console.log(data);
-//            },
-//        });
+        token = content.split('=')[1];
+        $.ajax({
+            type: 'GET',
+            url: 'app/getTokenInfo.php?token=' + token,
 
-        window.open(content.split("/")[4]);
-        $('#text').html(content);
+            success: function(data) {
+                // token not found
+                if(data != 2) {
+                    token_info = JSON.parse(data);
+                    token_info.usada == 1 ? color = "red" : color = "green";
+                    $('.modal').css({"display": "block", "background-color": color});
+                    $('#modal_name').html(token_info.nombre);
+                    $('#modal_token').html(token_info.token);
+                    $('#modal_usada').html(token_info.usada);
+                } else {
+                    $('#modal_name').html("ENTRADA INVALIDA");
+                    $('.modal').css({"display": "block", "background-color": "red"});
+                }
+            },
+            error: function(data) {
+                console.log(data);
+            },
+        });
+
     });
 
 

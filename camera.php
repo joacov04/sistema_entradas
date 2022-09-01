@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <title>Generar entradas</title>
+    <title>Escanear QR</title>
 </head>
 <body class="flex">
     <h2 id="text">Scan QR</h2>
+    <div id="validation" class="modal" style="background-color:red; color: black; border-radius:45px; padding:2%;">
+        <h1 id="modal_name"></h1>
+        <p id="modal_token"></p>
+        <p id="modal_usada"></p>
+    </div>
+
     <video id="preview"></video>
     <p>Seleccionar una de las opciones<p>
     <select name="cameras" id="cameras">
