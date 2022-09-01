@@ -7,7 +7,7 @@
     --color4: #f56038;
     --color5: #f56038;
     --color6: #f7a325;
-    --softGreen: #7ec281;
+    --softGreen: #06880b;
     --softRed: #cb4242;
     --color8: #03171a;
     /*
@@ -28,6 +28,10 @@
     top: 12%;
     z-index:1;
     width:85%;
+}
+
+.modal p {
+    color: var(--color8);
 }
 
 body {
