@@ -10,9 +10,7 @@
     <title>Generar entradas</title>
 </head>
 <body>
-<?php
-echo $_SERVER['PHP_AUTH_USER'];
-?>
+    
     <script type="text/javascript">
         $(document).ready(function(){
             var maxField = 20; //Input fields increment limitation
@@ -41,6 +39,8 @@ echo $_SERVER['PHP_AUTH_USER'];
 
     <div>
         <h1>ENTRADAS</h1>
+        <a href="buscar.php"><img src="img/lupa.png" id="lupa"></a>
+
         <form  method="post">                
             <div class="field_wrapper flex">
                 <div>
