@@ -41,7 +41,6 @@ function ready(being_called=0) {
             url: 'app/getTokenInfo.php?token=' + token,
 
             success: function(data) {
-                // token not found
                 if(data != 2) {
                     token_info = JSON.parse(data);
                     token_info.usada == 1 ? color = "red" : color = "green";
@@ -61,6 +60,7 @@ function ready(being_called=0) {
                         }
                     });
 
+                // token not found
                 } else {
                     $('#modal_name').html("ENTRADA INVALIDA");
                     $('#modal_token').html("");
