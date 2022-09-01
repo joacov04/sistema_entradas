@@ -12,7 +12,7 @@
 </head>
 <body class="flex">
     <h2 id="text">Scan QR</h2>
-    <div id="validation" class="modal" style="background-color:red; color: black; border-radius:45px; padding:2%;">
+    <div id="validation" class="modal">
         <h1 id="modal_name"></h1>
         <p id="modal_token"></p>
         <p id="modal_usada"></p>

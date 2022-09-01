@@ -16,6 +16,12 @@
     --color6: #f55951;
  */
 }
+.modal {
+    background-color: red;
+    color: black;
+    border-radius:45px;
+    padding:2%;
+}
 
 body {
     background-color: var(--color1);
