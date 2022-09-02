@@ -12,7 +12,7 @@ if(isset($_POST['nombre']))
         $nombre = $row['nombre'];
         $token = $row['token'];
         $vendedor = $row['vendedor'];
-        $row['usada'] == '0' ? $usada='SI' : $usada='NO';
+        $row['usada'] == '1' ? $usada='SI' : $usada='NO';
 
         echo "<tr>";
         echo "<td>".$nombre."</td>";
