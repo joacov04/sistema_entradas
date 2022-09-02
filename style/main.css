@@ -7,8 +7,8 @@
     --color4: #f56038;
     --color5: #f56038;
     --color6: #f7a325;
-    --softGreen: #128022;
-    --softRed: #ff5e5e;
+    --softGreen: #0f875d;
+    --softRed: #FF0040;;
     --color8: #03171a;
     /*
     --color1: #361d32;
@@ -47,14 +47,14 @@ img {
 
 
 p #modal_name {
-    font-size: 55px !important;
+    font-size: 55px;
     color: white;
 }
 .modal {
     background-color: var(--softRed);
     color: var(--color8);
     border-radius:0px;
-    padding:2%;
+    padding:0;
     position: fixed;
     z-index:1;
     width:100%;
@@ -69,7 +69,7 @@ p #modal_name {
 
 .modal h1 {
     font-weight: 10;
-    margin-top: 25%;
+    margin-top: 45%;
 }
 
 
@@ -183,3 +183,12 @@ select {
     content: "";
 }
 
+.material-symbols-outlined {
+    font-size: 74px !important;
+    cursor: pointer;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
