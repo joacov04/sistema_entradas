@@ -20,7 +20,12 @@
         <div class="box">
             <table id="names">
                 <h2>Entradas</h2>
-                <input type="text" id="search_name" onkeyup="nameSearch()" placeholder="Buscar nombre...">
+                <input type="text" id="search_name" onkeyup="nameSearch($('#search_select').val())" placeholder="Buscar">
+                <select id="search_select">
+                    <option value="0">Nombre</option>
+                    <option value="1">Token</option>
+                    <option value="3">Vendedor</option>
+                </select>
                 <thead>
                     <tr>
                         <th>Nombre</th>

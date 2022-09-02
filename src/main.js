@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    let selected = $('#search_select').val();
+
 
     $('#qr_icon').click(function() {
         window.location.href = 'camera.php';
@@ -32,13 +34,13 @@ $(document).ready(function(){
     });
 });
 
-function nameSearch() {
+function nameSearch(id=0) {
     let input, filter, tr, td, i, text_value;
     input = $('#search_name');
     filter = input.val().toUpperCase();
     tr = $('tr');
     for(i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
+        td = tr[i].getElementsByTagName("td")[id];
         if (td) {
           text_value = td.textContent || td.innerText;
 
