@@ -6,21 +6,21 @@ if(isset($_POST['nombre']))
     $nombre = strip_tags($_POST['nombre']) ;
     $nombre = mysqli_real_escape_string($conn, $nombre);
 
-    $sql = $conn->query("SELECT * FROM fdp WHERE nombre='".$nombre."' ");
+    $sql = $conn->query("SELECT * FROM fdp");
     $row_cnt = $sql->num_rows;
-    if($row_cnt > 0) {
-        $row = $sql->fetch_array(MYSQLI_ASSOC);
-        $nombre_encontrado = $row['nombre'];
+    while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
+        $nombre = $row['nombre'];
         $token = $row['token'];
-        $entrada_usada = $row['usada'];
         $vendedor = $row['vendedor'];
-        if($entrada_usada == 1) {
-            $valida = "Entrada no válida";
-        } else $valida = "Entrada válida";
-        echo "<a id='search'>".$nombre_encontrado." - ".$token." - ".$valida." - Vendedor: ".$vendedor." </a>";
-    } else echo "No se encontro el nombre";
+        $row['usada'] == '0' ? $usada='SI' : $usada='NO';
 
-$cant_query = $conn->query("SELECT * FROM fdp");
-$total_count = $cant_query->num_rows;
-echo "<h2 id='qr'>QR generados: ".$total_count."</h2>";
+        echo "<tr>";
+        echo "<td>".$nombre."</td>";
+        echo "<td>".$token."</td>";
+        echo "<td>".$usada."</td>";
+        echo "<td>".$vendedor."</td>";
+        echo "</tr>";
+
+    }
+
 ?>

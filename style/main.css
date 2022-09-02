@@ -10,6 +10,9 @@
     --softGreen: #0f875d;
     --softRed: #FF0040;;
     --color8: #03171a;
+    --color9: #4e6268;
+    --color9-transparent: #4e62687a;
+    --text-body-table: #b0b0b0;
     /*
     --color1: #361d32;
     --color2: #edd2cb;
@@ -24,6 +27,31 @@
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
+}
+
+td,th {
+    border: 2px solid var(--color9);
+    padding: 5px;
+}
+
+tr:hover {
+    background-color: var(--color9-transparent);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tbody {
+    color: var(--text-body-table);
+}
+
+.box {
+  padding: 50px 50px; /* top right bottom left*/
+  background-color: var(--color8);
+  font-weight: 600;
+  border-radius: 25px;
+  margin: auto;
 }
 
 #arrow_back {

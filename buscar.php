@@ -14,20 +14,25 @@
 
     <div class='flex'>
         <span class="material-symbols-outlined icons" id="arrow_back" onclick="history.back()">arrow_back</span>
-        <h1>Buscar nombre</h1>
-        <form  method="post">                
-            <div class="field_wrapper flex">
-                <div>
-                    <input type="text" placeholder="Nombre y Apellido" name="nombre" value="">
-                </div>
-            </div>
-            <div class="flex">
-                <input type="submit" name="submit" value="BUSCAR">
-            </div>
-        </form>
-        <?php
-            include("app/backend_buscar.php");
-        ?>
+        <div class="box">
+            <table>
+                <h2>Entradas</h2>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Token</th>
+                        <th>Usada</th>
+                        <th>Vendedor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                    include("app/backend_buscar.php");
+                ?>
+                </tbody>
+            </table>
+
+        </div>
 
     </div>
     
