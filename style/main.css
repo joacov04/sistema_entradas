@@ -23,6 +23,10 @@
  */
 }
 
+#search_name {
+    margin-bottom: 15px;
+}
+
 #div_icons {
     margin-bottom: 30px;
     display: flex;

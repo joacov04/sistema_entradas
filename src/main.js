@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
     $('#qr_icon').click(function() {
         window.location.href = 'camera.php';
     });
@@ -30,3 +31,22 @@ $(document).ready(function(){
         x--; //Decrement field counter
     });
 });
+
+function nameSearch() {
+    let input, filter, tr, td, i, text_value;
+    input = $('#search_name');
+    filter = input.val().toUpperCase();
+    tr = $('tr');
+    for(i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          text_value = td.textContent || td.innerText;
+
+            if (text_value.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
