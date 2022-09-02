@@ -29,7 +29,8 @@ GRANT ALL PRIVILEGES ON fdp.* to 'fdp'@'%';
 CREATE TABLE IF NOT EXISTS fdp (
 token text,
 nombre text,
-usada boolean);
+usada boolean
+vendedor text);
 ```
 4. Crear un archivo `credentials.inc` para php-mysql con el siguiente formato
 ```
