@@ -47,7 +47,7 @@ img {
 
 
 p #modal_name {
-    font-size: 55px;
+    font-size: 55px !important;
     color: white;
 }
 .modal {
@@ -66,6 +66,10 @@ p #modal_name {
 
 .modal p {
     color: var(--color8);
+}
+
+.modal h1 {
+    font-weight: 10;
 }
 
 
