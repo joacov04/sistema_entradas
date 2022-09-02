@@ -26,6 +26,10 @@
     justify-content: center;
 }
 
+#arrow_back {
+    margin-right: 80%;
+}
+
 .icons {
     color: var(--color8);
 }

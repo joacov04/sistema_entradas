@@ -12,6 +12,7 @@
     <title>Escanear QR</title>
 </head>
 <body class="flex">
+    <span class="material-symbols-outlined icons" id="arrow_back" onclick="history.back()">arrow_back</span>
     <h2 id="text">Scan QR</h2>
     <div id="validation" class="modal">
         <span class="material-symbols-outlined">
