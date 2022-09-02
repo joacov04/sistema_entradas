@@ -12,7 +12,7 @@
 </head>
 <body>
     
-    <script type="text/javascript" src="src/multipleNames.js"></script>
+    <script type="text/javascript" src="src/main.js"></script>
 
     <div>
         <h1>ENTRADAS</h1>
