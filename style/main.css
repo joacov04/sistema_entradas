@@ -20,31 +20,15 @@
  */
 }
 
-#lupa {
-    margin-right: 15px;
-}
-#camera {
-    margin-right: 15px;
-}
-
-#imgs {
-    margin-bottom:30px;
-
+#div_icons {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
 }
 
-#a_lupa {
-    all: initial;
-    cursor: pointer;
+.icons {
+    color: var(--color8);
 }
-
-#a_camara {
-    all: initial;
-    cursor: pointer;
-}
-img {
-    width: 60px;
-}
-
 
 p #modal_name {
     font-size: 55px;

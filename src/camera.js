@@ -1,12 +1,15 @@
 $(document).ready(function() {
     ready(being_called=0)
     onCameraUpdate();
+
     $('.modal').click(function() {
         $('.modal').css('display', 'none');
     });
+
     $('body').click(function() {
         $('.modal').css('display', 'none');
     });
+
 });
 
 function ready(being_called=0) {

@@ -1,4 +1,13 @@
 $(document).ready(function(){
+
+    $('#qr_icon').click(function() {
+        window.location.href = 'camera.php';
+    });
+
+    $('#search_icon').click(function() {
+        window.location.href = 'buscar.php';
+    });
+
     var maxField = 20; //Input fields increment limitation
     var addButton = $('.add_button'); //Add button selector
     var wrapper = $('.field_wrapper'); //Input field wrapper
