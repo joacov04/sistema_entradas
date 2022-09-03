@@ -23,6 +23,14 @@
  */
 }
 
+.delete_action {
+    color: #f43333 !important;
+}
+.delete_action:hover {
+    color: white !important;
+}
+
+
 .accion {
     cursor: pointer;
     padding: 1px 4px;

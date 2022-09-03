@@ -22,6 +22,7 @@ while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
     echo "<td>".$usada."</td>";
     echo "<td>".$vendedor."</td>";
     echo "<td><a class='accion used_action'>".$accion."</a></td>";
+    echo "<td><a class='accion delete_action'>Eliminar</a></td>";
     echo "</tr>";
 
 }

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $('.used_action').click(function() {
         //confirm prompt here
         let tr = $(this).parent().parent();
@@ -28,6 +29,30 @@ $(document).ready(function(){
         });
 
     });
+
+    $('.delete_action').click(function() {
+        //confirm prompt here
+        let tr = $(this).parent().parent();
+        let td = tr[0].getElementsByTagName('td'); 
+        let token = td[1].innerText;
+        $.ajax({
+            type: 'POST',
+            url: 'app/qr_management.php',
+            data: {
+                'token': token,
+                'action': 1,
+            },
+            success: function(data) {
+                console.log(data);
+                tr.remove();
+            },
+            error: function(err) {
+                console.log(err);
+            }
+        });
+
+    });
+
     $('#qr_icon').click(function() {
         window.location.href = 'camera.php';
     });
