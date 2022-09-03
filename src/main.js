@@ -1,18 +1,30 @@
 $(document).ready(function(){
-
     $('.used_action').click(function() {
-        let token = $(this).parent().parent()[0].getElementsByTagName('td')[1].innerText;
+        //confirm prompt here
+        let tr = $(this).parent().parent();
+        let td = tr[0].getElementsByTagName('td'); 
+        let token = td[1].innerText;
         $.ajax({
             type: 'POST',
-            url: 'api/qr_management.php?token='+token,
+            url: 'app/qr_management.php',
+            data: {
+                'token': token,
+                'action': 0,
+            },
             success: function(data) {
                 console.log(data);
+                if(td[2].innerText == 'SI') {
+                    td[2].innerText='NO';
+                    td[4].getElementsByTagName('a')[0].innerText='Usada';
+                } else {
+                    td[2].innerText='SI';
+                    td[4].getElementsByTagName('a')[0].innerText='NO Usada';
+                }
+                //tr.remove();
             },
             error: function(err) {
                 console.log(err);
             }
-
-            
         });
 
     });

@@ -2,8 +2,6 @@
 include_once "connect.php";
 
 
-$nombre = mysqli_real_escape_string($conn, $nombre);
-
 $sql = $conn->query("SELECT * FROM fdp");
 $row_cnt = $sql->num_rows;
 while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
