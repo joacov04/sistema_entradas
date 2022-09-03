@@ -13,14 +13,11 @@ if(isset($_POST['action'], $_POST['token'])) {
     if($action == 0) {
         if($usada == 0) {
             $update = $conn->query("UPDATE fdp SET usada=1 WHERE token='".$token."'");
-            echo $token;
         } else {
             $update = $conn->query("UPDATE fdp SET usada=0 WHERE token='".$token."'");
-            echo $token;
         }
     } else if($action == 1) {
         $delete = $conn->query("DELETE FROM fdp WHERE token='".$token."'");
-        echo $token;
     }
 
 }
