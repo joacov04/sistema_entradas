@@ -1,5 +1,21 @@
 $(document).ready(function(){
 
+    $('.used_action').click(function() {
+        let token = $(this).parent().parent()[0].getElementsByTagName('td')[1].innerText;
+        $.ajax({
+            type: 'POST',
+            url: 'api/qr_management.php?token='+token,
+            success: function(data) {
+                console.log(data);
+            },
+            error: function(err) {
+                console.log(err);
+            }
+
+            
+        });
+
+    });
     $('#qr_icon').click(function() {
         window.location.href = 'camera.php';
     });

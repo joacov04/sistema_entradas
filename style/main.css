@@ -23,6 +23,22 @@
  */
 }
 
+.accion {
+    cursor: pointer;
+    padding: 1px 4px;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: initial;
+    border: none;
+    cursor: pointer;
+    font-size: initial;
+    color: var(--color6);
+}
+
+.accion:hover {
+    color: white;
+}
+
 #search_name {
     margin-bottom: 15px;
 }
