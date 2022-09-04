@@ -32,7 +32,7 @@
                         <th>Token</th>
                         <th>Usada</th>
                         <th>Vendedor</th>
-                        <th>Acción</th>
+                        <th>Marcar como</th>
                         <th>Eliminar</th>
                     </tr>
                 </thead>
