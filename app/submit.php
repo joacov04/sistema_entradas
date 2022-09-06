@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
              if($entry != '.' && $entry != '..') {
                 $script = "{const blob=fetch('qr/".$entry."');navigator.share({files:[blob]})}";
                 echo $script;
-                echo "<a class='qrs' onclick=".$script.">".$entry."</a> \n";
+                echo "<a class='qrs' onclick=$script>$entry</a> \n";
                 $count++;
              }
         }
