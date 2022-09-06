@@ -23,7 +23,9 @@ if(isset($_POST['submit'])){
         $count = 0;
         while (false !== ($entry = readdir($handle))){
              if($entry != '.' && $entry != '..') {
-                echo "<a class='qrs' id='".$count."'>".$entry."</a> \n";
+                $script = "{const blob=fetch('qr/".$entry."');navigator.share({files:[blob]})}";
+                echo $script;
+                echo "<a class='qrs' onclick=".$script.">".$entry."</a> \n";
                 $count++;
              }
         }
