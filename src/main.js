@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+    $('.qrs').click(function () {
+        const blob = fetch(window.location.href+'/qr/'+$(this).innerText+'.png');
+        navigator.share({files: [blob]});
+    });
     $('.used_action').click(function() {
         //confirm prompt here
         let tr = $(this).parent().parent();

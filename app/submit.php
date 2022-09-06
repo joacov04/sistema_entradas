@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
         echo "<div class='downloads'>";
         while (false !== ($entry = readdir($handle))){
              if($entry != '.' && $entry != '..') {
-                echo "<a class='qrs' href='app/download.php?file=".$entry."'>".$entry."</a> \n";
+                echo "<a class='qrs'>".$entry."</a> \n";
              }
         }
         echo "</div>";
