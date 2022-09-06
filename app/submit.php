@@ -20,9 +20,11 @@ if(isset($_POST['submit'])){
     }
     if($handle = opendir('qr/')) {
         echo "<div class='downloads'>";
+        $count = 0;
         while (false !== ($entry = readdir($handle))){
              if($entry != '.' && $entry != '..') {
-                echo "<a class='qrs'>".$entry."</a> \n";
+                echo "<a class='qrs' id='".$count."'>".$entry."</a> \n";
+                $count++;
              }
         }
         echo "</div>";

@@ -1,8 +1,10 @@
 $(document).ready(function(){
 
     $('.qrs').click(function () {
-        const blob = fetch(window.location.href+'/qr/'+$(this).innerText+'.png');
-        navigator.share({files: [blob]});
+        for(i=0; i<$(this).length; i++) {
+            const blob = fetch(window.location.href+'qr/'+$(this)[i].innerText);
+            navigator.share({files: [blob]});
+        }
     });
     $('.used_action').click(function() {
         //confirm prompt here
