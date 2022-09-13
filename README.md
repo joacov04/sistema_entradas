@@ -7,6 +7,7 @@ Sistema simple de control de asistencia para eventos
 - [ ] Hacer un boton en algun lado (accesible solo con contraseña) que permita que cualquier telefono pueda escanear qrs (para el dia del evento ultima hora)
 - [ ] poder cambiar imagen de fondo desde la pagina + varias tablas para varios dias
 - [ ] panel buscar para usuarios que no son admin (bien seguro)
+- [ ] que la tabla la cree directamente el programa
 
 ## Instalacion en servidor (linux):
 **Requerimientos**: 
@@ -30,7 +31,7 @@ GRANT ALL PRIVILEGES ON fdp.* to 'fdp'@'%';
 CREATE TABLE IF NOT EXISTS fdp (
 token text,
 nombre text,
-usada boolean
+usada boolean,
 vendedor text);
 ```
 4. Crear un archivo `credentials.inc` para php-mysql con el siguiente formato
