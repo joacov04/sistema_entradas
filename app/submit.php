@@ -23,9 +23,7 @@ if(isset($_POST['submit'])){
         $count = 0;
         while (false !== ($entry = readdir($handle))){
              if($entry != '.' && $entry != '..') {
-                $script = "if(navigator.share){const blob=fetch('qr/$entry');navigator.share({files:[blob]})}else {console.log(2)}";
-                echo $script;
-                echo "<a class='qrs' onclick=\"$script\">$entry</a> \n";
+                echo "<a class='qrs' href='download.php?file=".$entry."'>".$entry."</a> \n";
                 $count++;
              }
         }
