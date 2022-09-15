@@ -41,7 +41,7 @@ function ready(being_called=0) {
         token = content.split('=')[1];
         $.ajax({
             type: 'GET',
-            url: 'app/getTokenInfo.php?token=' + token,
+            url: 'getTokenInfo.php?token=' + token,
 
             success: function(data) {
                 if(data != 2) {
@@ -54,7 +54,7 @@ function ready(being_called=0) {
                     $('#modal_usada').html(msg);
                     $.ajax({
                         type: 'GET',
-                        url: 'app/usada.php?token='+token,
+                        url: 'usada.php?token='+token,
                         success: function(data) {
                             console.log("entrada usada: "+ data);
                         },
