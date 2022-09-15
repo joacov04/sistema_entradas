@@ -54,11 +54,11 @@ $(document).ready(function(){
     });
 
     $('#qr_icon').click(function() {
-        window.location.href = 'camera.php';
+        window.location.href = 'app/camera.php';
     });
 
     $('#search_icon').click(function() {
-        window.location.href = 'buscar.php';
+        window.location.href = 'app/buscar.php';
     });
 
     let maxField = 20; //Input fields increment limitation
