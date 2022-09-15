@@ -7,7 +7,7 @@ $(document).ready(function(){
         let token = td[1].innerText;
         $.ajax({
             type: 'POST',
-            url: 'app/qr_management.php',
+            url: 'qr_management.php',
             data: {
                 'token': token,
                 'action': 0,
@@ -37,7 +37,7 @@ $(document).ready(function(){
         let token = td[1].innerText;
         $.ajax({
             type: 'POST',
-            url: 'app/qr_management.php',
+            url: 'qr_management.php',
             data: {
                 'token': token,
                 'action': 1,
