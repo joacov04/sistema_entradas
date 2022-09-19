@@ -38,7 +38,7 @@ function ready(being_called=0) {
         console.error(e);
     });
     scanner.addListener('scan', function (content) {
-        token = content.split('=')[1];
+        token = content;
         $.ajax({
             type: 'GET',
             url: 'getTokenInfo.php?token=' + token,
