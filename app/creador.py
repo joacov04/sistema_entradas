@@ -56,7 +56,7 @@ def overlay(qr_path, token):
 
 
 def makeQR(token, nombre):
-    qr = qrcode.QRCode(version=1, box_size=10, border=1)
+    qr = qrcode.QRCode(version=1, box_size=14, border=1)
     qr.add_data(token)
     qr.make(fit=True)
     img = qr.make_image(fill='black', back_color='white')
