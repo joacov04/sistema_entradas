@@ -36,7 +36,7 @@ INSERTAR_ENTRADA = ("INSERT INTO fdp "
                     "VALUES (%s, %s, %s, %s)")
 
 def overlay(qr_path, token):
-    font = ImageFont.truetype(font='app/Calibri.ttf', size=35)
+    font = ImageFont.truetype(font='app/Calibri.ttf', size=45)
     background = Image.open('app/22oct.jpeg')
     (background_width, background_heigth) = background.size
 
