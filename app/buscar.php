@@ -23,7 +23,7 @@ if ($user != 'joaquin') {
 <body>
 
     <div class='flex'>
-        <span class="material-symbols-outlined icons" id="arrow_back" onclick="window.location.href='../index.php'">arrow_back</span>
+        <span class="material-symbols-outlined icons" id="arrow_back" onclick="window.location.href='../'">arrow_back</span>
         
         <div class="box">
             <table id="names">
