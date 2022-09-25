@@ -15,6 +15,7 @@
 <body class="flex">
     <span class="material-symbols-outlined icons" id="arrow_back" onclick="window.location.href='../'">arrow_back</span>
     <h2 id="text">Scan QR</h2>
+    <h1 id="xd">CARGANDO</h1>
     <div id="validation" class="modal">
         <span class="material-symbols-outlined">
         close

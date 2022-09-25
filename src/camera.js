@@ -38,6 +38,7 @@ function ready(being_called=0) {
         console.error(e);
     });
     scanner.addListener('scan', function (content) {
+        $('#xd').css('display', 'block');
         token = content;
         $.ajax({
             type: 'GET',
@@ -86,3 +87,6 @@ function onCameraUpdate() {
         ready(being_called=1);
     })
 }
+$(document).ajaxStop(function() {
+    $('#xd').css('display', 'none');
+});

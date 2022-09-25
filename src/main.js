@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $('#sync').click(function() {
         location.reload();
     });

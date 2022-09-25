@@ -23,6 +23,11 @@
  */
 }
 
+#xd {
+    display: none;
+    z-index: 1;
+
+}
 
 #sync {
     float: right;
