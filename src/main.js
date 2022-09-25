@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    $('#sync').click(function() {
+        location.reload();
+    });
 
     $('.used_action').click(function() {
         //confirm prompt here

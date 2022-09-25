@@ -23,6 +23,17 @@
  */
 }
 
+
+#sync {
+    float: right;
+    vertical-align: middle;
+}
+
+.title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .delete_action {
     color: #f43333 !important;
 }

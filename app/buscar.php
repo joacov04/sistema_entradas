@@ -27,7 +27,10 @@ if ($user != 'joaquin') {
         
         <div class="box">
             <table id="names">
-                <h2>Buscar - Admin Panel</h2>
+            <div>
+                <h2 class="title">Buscar - Admin Panel</h2>
+                <span class="material-symbols-outlined icons" id="sync">sync</span>
+            </div>
                 <input type="text" id="search_name" onkeyup="nameSearch($('#search_select').val())" placeholder="Buscar">
                 <select id="search_select">
                     <option value="0">Nombre</option>
