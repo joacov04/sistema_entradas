@@ -89,7 +89,7 @@ $(document).ready(function(){
 });
 
 function nameSearch(id=0) {
-    let input, filter, tr, td, i, text_value;
+    let input, filter, tr, td, i, text_value, displaying = 0, num_elem;
     input = $('#search_name');
     filter = input.val().toUpperCase();
     tr = $('tr');
@@ -99,7 +99,16 @@ function nameSearch(id=0) {
           text_value = td.textContent || td.innerText;
 
             if (text_value.toUpperCase().indexOf(filter) > -1) {
+
+                displaying += 1;
                 tr[i].style.display = "";
+                num_elem = tr[i].getElementsByClassName('num');
+
+                for (let item of num_elem) {
+                    item.style.display = "none";
+                }
+                tr[i].innerHTML += "<td class='num'>"+displaying+"</td>";
+
             } else {
                 tr[i].style.display = "none";
             }
