@@ -1,3 +1,7 @@
+"""
+Generates a QR Code with the name and seller specified in argv[]
+
+"""
 import string
 import random
 import sys
@@ -10,17 +14,16 @@ from PIL import ImageFont
 # to do de aca
 # que se pueda usar cualquier foto en vez de solo la que se llama back.png
 
-connection_file = open("app/credentials.inc", "r")
+with open("app/credentials.inc", "r", encoding='ascii') as connection_file:
+    credentials = {"user": "", "pass": "", "base": "", "host": ""}
+    for word in connection_file:
+        for key in credentials:
+            if re.search(key, word):
+                if "'" in word:
+                    credentials[key] = word.split("'")[1]
+                else:
+                    credentials[key] = word.split("\"")[1]
 
-
-credentials = {"user": "", "pass": "", "base": "", "host": ""}
-for word in connection_file:
-    for key in credentials:
-        if re.search(key, word):
-            if "'" in word:
-                credentials[key] = word.split("'")[1]
-            else:
-                credentials[key] = word.split("\"")[1]
 
 conn = mysql.connector.connect(
         host=credentials["host"],
@@ -35,7 +38,11 @@ INSERTAR_ENTRADA = ("INSERT INTO fdp "
                     "(token, nombre, usada, vendedor) "
                     "VALUES (%s, %s, %s, %s)")
 
+
 def overlay(qr_path, token):
+    """
+    Pastes the QR specified into the background image, with the token below.
+    """
     font = ImageFont.truetype(font='app/Calibri.ttf', size=45)
     background = Image.open('app/22oct.jpeg')
     (background_width, background_heigth) = background.size
@@ -55,7 +62,10 @@ def overlay(qr_path, token):
     background.save(qr_path)
 
 
-def makeQR(token, nombre):
+def make_qr(token, nombre):
+    """
+    Makes the QR code with the specified token and saves it as the person name.
+    """
     qr = qrcode.QRCode(version=1, box_size=20, border=1)
     qr.add_data(token)
     qr.make(fit=True)
@@ -63,26 +73,30 @@ def makeQR(token, nombre):
     img_name = nombre.replace(' ', '_')
     img.save('qr/'+img_name+'.png')
 
-def tokenAndSave(name: str, seller: str):
+
+def token_and_save(name: str, seller: str):
+    """
+    Generates the token and calls all the functions
+    """
 
     letters = string.ascii_uppercase
     tok = ''.join(random.choice(letters) for _ in range(15))
 
-    cursor.execute("SELECT * FROM fdp WHERE token='%s'"%tok)
+    cursor.execute("SELECT * FROM fdp WHERE token='%s'" % tok)
     if cursor.rowcount > 0:
         cursor.close()
-        tokenAndSave(name, seller)
+        token_and_save(name, seller)
     else:
         cursor.fetchall()
         entrada_datos = (tok, name.replace('_', ' '), "0", seller)
         cursor.execute(INSERTAR_ENTRADA, entrada_datos)
         conn.commit()
         cursor.close()
-        makeQR(tok, name)
+        make_qr(tok, name)
         overlay('qr/'+name+'.png', tok)
 
 
-tokenAndSave(sys.argv[1], sys.argv[2])
+token_and_save(sys.argv[1], sys.argv[2])
 
 conn.close()
 # for(token, nombre, usada) in cursor:
