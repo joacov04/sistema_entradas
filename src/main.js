@@ -4,7 +4,7 @@ $(document).ready(function(){
         location.reload();
     });
 
-    $('.used_action').click(function() {
+    $(document).on("click", ".used_action", function() {
         //confirm prompt here
         let tr = $(this).parent().parent();
         let td = tr[0].getElementsByTagName('td'); 
@@ -34,7 +34,7 @@ $(document).ready(function(){
 
     });
 
-    $('.delete_action').click(function() {
+    $(document).on("click", ".delete_action", function() {
         //confirm prompt here
         let tr = $(this).parent().parent();
         let td = tr[0].getElementsByTagName('td'); 
