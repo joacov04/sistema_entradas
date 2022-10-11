@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 function ready(being_called=0) {
     $('.modal').css("display", "none");
-    let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), mirror: false, backgroundScan: false, scanPeriod: 0.1 });
+    let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), mirror: false, backgroundScan: false });
         Instascan.Camera.getCameras().then(function (cameras) {
             if(being_called == 0) {
                 if (cameras.length > 0) {
