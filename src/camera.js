@@ -28,7 +28,7 @@ function ready(being_called=0) {
                   console.error('No cameras found.');
                 }
             }
-            let selected = $("#cameras").find((":selected")).value();
+            let selected = $("#cameras").find((":selected")).html();
             console.log(selected);
             cameras.forEach(camera => {
                 if(selected.includes(camera.id)){
