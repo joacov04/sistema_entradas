@@ -28,9 +28,10 @@ function ready(being_called=0) {
                   console.error('No cameras found.');
                 }
             }
-            let selected = $("#cameras").find((":selected")).value();
+            let selected = $("#cameras").find((":selected")).text();
+            console.log(selected);
             cameras.forEach(camera => {
-                if(selected.includes(camera.name)){
+                if(selected.includes(camera.id)){
                     scanner.start(camera);
                 }
             });
