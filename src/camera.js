@@ -32,7 +32,7 @@ function ready(being_called=0) {
             cameras.forEach(camera => {
                 if(selected.includes(camera.id)){
                     scanner.stop().then(function() {
-                        scanner.start(camera[1]);
+                        scanner.start(cameras[1]);
 
                     });
                 }
