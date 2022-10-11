@@ -25,7 +25,7 @@
         <p id="modal_usada"></p>
     </div>
 
-    <video id="preview"></video>
+    <video id="preview" playsinline></video>
     <p>Seleccionar una de las opciones<p>
     <select name="cameras" id="cameras">
     </select> 
