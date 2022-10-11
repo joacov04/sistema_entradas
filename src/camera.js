@@ -38,10 +38,14 @@ function ready(being_called=0) {
         console.error(e);
     });
     scanner.addListener('scan', function (content) {
+        $('.modal').css({"display": "block", "background-color": "orange"});
         $('#modal_name').html("CARGANDO");
         $('#modal_token').html("");
         $('#modal_usada').html("");
-        $('.modal').css({"display": "block", "background-color": "orange"});
+        setTimeout(function(){
+
+            console.log("delay");
+        }, 5000);
         token = content;
         $.ajax({
             type: 'GET',
