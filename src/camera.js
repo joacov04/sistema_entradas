@@ -19,7 +19,7 @@ function ready(being_called=0) {
             if(being_called == 0) {
                 if (cameras.length > 0) {
                     cameras.forEach(camera => {
-                        $('#cameras').append(`<option value="${camera.name}">
+                        $('#cameras').append(`<option value="${camera.id}">
                                                ${camera.name}
                                           </option>`);
 
@@ -28,7 +28,7 @@ function ready(being_called=0) {
                   console.error('No cameras found.');
                 }
             }
-            let selected = $("#cameras").find((":selected")).text();
+            let selected = $("#cameras").find((":selected")).value();
             cameras.forEach(camera => {
                 if(selected.includes(camera.name)){
                     scanner.start(camera);
