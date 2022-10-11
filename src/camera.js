@@ -38,7 +38,10 @@ function ready(being_called=0) {
         console.error(e);
     });
     scanner.addListener('scan', function (content) {
-        $('#xd').css('display', 'block');
+        $('#modal_name').html("CARGANDO");
+        $('#modal_token').html("");
+        $('#modal_usada').html("");
+        $('.modal').css({"display": "block", "background-color": "orange"});
         token = content;
         $.ajax({
             type: 'GET',
@@ -88,5 +91,6 @@ function onCameraUpdate() {
     })
 }
 $(document).ajaxStop(function() {
-    $('#xd').css('display', 'none');
+    //$('#xd').css('display', 'none');
+    console.log('a');
 });
