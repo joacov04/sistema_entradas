@@ -42,10 +42,6 @@ function ready(being_called=0) {
         $('#modal_name').html("CARGANDO");
         $('#modal_token').html("");
         $('#modal_usada').html("");
-        setTimeout(function(){
-
-            console.log("delay");
-        }, 5000);
         token = content;
         $.ajax({
             type: 'GET',
