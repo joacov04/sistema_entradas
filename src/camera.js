@@ -29,7 +29,6 @@ function ready(being_called=0) {
                 }
             }
             let selected = $("#cameras").find((":selected")).val();
-            console.log(selected);
             cameras.forEach(camera => {
                 if(selected.includes(camera.id)){
                     scanner.start(camera);
