@@ -28,6 +28,7 @@
                     <option value="0">Nombre</option>
                     <option value="1">Token</option>
                     <option value="3">Vendedor</option>
+                    <option value="2">Usada</option>
                 </select>
                 <thead>
                     <tr>
