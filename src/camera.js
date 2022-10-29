@@ -31,6 +31,7 @@ function ready(being_called=0) {
             let selected = $("#cameras").find((":selected")).val();
             $('#tx').html(selected)
             cameras.forEach(camera => {
+            $('#tx').html("entro al for")
                 if(selected.includes(camera.id)){
                     scanner.stop().then(function() {
                         scanner.start(camera);
