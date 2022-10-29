@@ -30,25 +30,26 @@ function ready(being_called=0) {
             }
             let selected = $("#cameras").find((":selected")).val();
             $('#tx').html(selected)
-            cameras.forEach(camera => {
-            $('#tx').html("entro al for")
-                if(selected.includes(camera.id)){
-                    $('#tx').html("entro al if")
-                    scanner.stop().then(function() {
-                        $('#tx').html("en funcion stop")
-                        scanner.start(camera).then(function() {
-                            $('#tx').html("abrio camera")
-                        }).catch(function(e) {
+            scanner.start(cameras[cameras.length-1])
+            //cameras.forEach(camera => {
+            //$('#tx').html("entro al for")
+            //    if(selected.includes(camera.id)){
+            //        $('#tx').html("entro al if")
+            //        scanner.stop().then(function() {
+            //            $('#tx').html("en funcion stop")
+            //            scanner.start(camera).then(function() {
+            //                $('#tx').html("abrio camera")
+            //            }).catch(function(e) {
 
-                            $('#tx').html("error: "+e);
-                        });
+            //                $('#tx').html("error: "+e);
+            //            });
 
-                    }).catch(function (e) {
-                        $('#tx').html("error: "+e);
+            //        }).catch(function (e) {
+            //            $('#tx').html("error: "+e);
 
-                    });
-                }
-            });
+            //        });
+            //    }
+            //});
         }).catch(function (e) {
         console.error(e);
     });
