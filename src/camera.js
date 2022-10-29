@@ -16,18 +16,18 @@ function ready(being_called=0) {
     $('.modal').css("display", "none");
     let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), mirror: false, backgroundScan: false });
         Instascan.Camera.getCameras().then(function (cameras) {
-            if(being_called == 0) {
-                if (cameras.length > 0) {
-                    cameras.forEach(camera => {
-                        $('#cameras').append(`<option value="${camera.id}">
-                                               ${camera.name}
-                                          </option>`);
+            //if(being_called == 0) {
+            //    if (cameras.length > 0) {
+            //        cameras.forEach(camera => {
+            //            $('#cameras').append(`<option value="${camera.id}">
+            //                                   ${camera.name}
+            //                              </option>`);
 
-                    });
-                } else {
-                  console.error('No cameras found.');
-                }
-            }
+            //        });
+            //    } else {
+            //      console.error('No cameras found.');
+            //    }
+            //}
             let selected = $("#cameras").find((":selected")).val();
             //$('#tx').html(selected)
             scanner.start(cameras[cameras.length-1])
