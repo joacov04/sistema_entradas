@@ -36,7 +36,12 @@ function ready(being_called=0) {
                     $('#tx').html("entro al if")
                     scanner.stop().then(function() {
                         $('#tx').html("en funcion stop")
-                        scanner.start(camera);
+                        scanner.start(camera).then(function() {
+                            $('#tx').html("abrio camera")
+                        }).catch(function(e) {
+
+                            $('#tx').html("error: "+e);
+                        });
 
                     }).catch(function (e) {
                         $('#tx').html("error: "+e);
