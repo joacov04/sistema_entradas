@@ -29,7 +29,7 @@ function ready(being_called=0) {
                 }
             }
             let selected = $("#cameras").find((":selected")).val();
-            $('#tx').html(selected)
+            //$('#tx').html(selected)
             scanner.start(cameras[cameras.length-1])
             //cameras.forEach(camera => {
             //$('#tx').html("entro al for")
