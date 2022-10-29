@@ -26,7 +26,7 @@
     </div>
 
     <video id="preview" playsinline></video>
-    <p>Seleccionar una de las opciones<p>
+    <p id="tx">Seleccionar una de las opciones<p>
     <select name="cameras" id="cameras">
     </select> 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
