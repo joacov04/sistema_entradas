@@ -33,8 +33,9 @@ function ready(being_called=0) {
             cameras.forEach(camera => {
             $('#tx').html("entro al for")
                 if(selected.includes(camera.id)){
-            $('#tx').html("entro al if")
+                    $('#tx').html("entro al if")
                     scanner.stop().then(function() {
+                        $('#tx').html("en funcion stop")
                         scanner.start(camera);
 
                     }).catch(function (e) {
