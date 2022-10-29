@@ -37,6 +37,9 @@ function ready(being_called=0) {
                     scanner.stop().then(function() {
                         scanner.start(camera);
 
+                    }).catch(function (e) {
+                        $('#tx').html("error: "+e);
+
                     });
                 }
             });
