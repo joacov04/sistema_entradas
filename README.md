@@ -40,6 +40,7 @@ $user='fdp';
 $host='localhost';
 $pass='password';
 $base='entradas';
+$table='fdp';
 ?>
 ```
 

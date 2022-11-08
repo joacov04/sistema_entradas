@@ -15,7 +15,7 @@ from PIL import ImageFont
 # que se pueda usar cualquier foto en vez de solo la que se llama back.png
 
 with open("app/credentials.inc", "r", encoding='ascii') as connection_file:
-    credentials = {"user": "", "pass": "", "base": "", "host": ""}
+    credentials = {"user": "", "pass": "", "base": "", "host": "", "table": ""}
     for word in connection_file:
         for key in credentials:
             if re.search(key, word):
@@ -34,7 +34,7 @@ conn = mysql.connector.connect(
 
 cursor = conn.cursor()
 
-INSERTAR_ENTRADA = ("INSERT INTO fdp "
+INSERTAR_ENTRADA = ("INSERT INTO "+credentials["table"]+" "
                     "(token, nombre, usada, vendedor) "
                     "VALUES (%s, %s, %s, %s)")
 

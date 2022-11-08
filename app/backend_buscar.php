@@ -2,7 +2,7 @@
 include_once "connect.php";
 
 
-$sql = $conn->query("SELECT * FROM fdp");
+$sql = $conn->query("SELECT * FROM ".$table);
 $row_cnt = $sql->num_rows;
 while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
     $nombre = $row['nombre'];
