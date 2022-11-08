@@ -82,7 +82,7 @@ def token_and_save(name: str, seller: str):
     letters = string.ascii_uppercase
     tok = ''.join(random.choice(letters) for _ in range(15))
 
-    cursor.execute("SELECT * FROM fdp WHERE token='%s'" % tok)
+    cursor.execute("SELECT * FROM "+credentials["table"]+" WHERE token='%s'" % tok)
     if cursor.rowcount > 0:
         cursor.close()
         token_and_save(name, seller)
