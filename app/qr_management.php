@@ -7,17 +7,17 @@ if(isset($_POST['action'], $_POST['token'])) {
     $action = mysqli_real_escape_string($conn, $_POST['action']);
     $token = mysqli_real_escape_string($conn, $_POST['token']);
 
-    $sql = $conn->query("SELECT usada FROM fdp WHERE token='".$token."'");
+    $sql = $conn->query("SELECT usada FROM ".$table." WHERE token='".$token."'");
     $usada = $sql->fetch_array(MYSQLI_ASSOC)['usada'];
 
     if($action == 0) {
         if($usada == 0) {
-            $update = $conn->query("UPDATE fdp SET usada=1 WHERE token='".$token."'");
+            $update = $conn->query("UPDATE ".$table." SET usada=1 WHERE token='".$token."'");
         } else {
-            $update = $conn->query("UPDATE fdp SET usada=0 WHERE token='".$token."'");
+            $update = $conn->query("UPDATE ".$table." SET usada=0 WHERE token='".$token."'");
         }
     } else if($action == 1) {
-        $delete = $conn->query("DELETE FROM fdp WHERE token='".$token."'");
+        $delete = $conn->query("DELETE FROM ".$table." WHERE token='".$token."'");
     }
 
 }
