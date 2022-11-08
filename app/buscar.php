@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <?php
 $user = $_SERVER['PHP_AUTH_USER'];
-echo $user;
-if ($user != 'joaquin' || $user != 'sopo') {
+if ($user != 'sopo') {
     header("Location: publicas.php", true, 301);
 }
 
