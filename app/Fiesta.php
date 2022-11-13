@@ -56,7 +56,19 @@ class Fiesta {
             echo json_encode($row);
             echo PHP_EOL;
         }
+    }
 
+    public function searchToken($token) {
+        $secure_token = mysqli_real_escape_string($this->conn, $token);
+        $sql = $this->conn->query("SELECT * FROM ".$this->party_name." WHERE token='".$secure_token."' ");
+
+        $row_cnt = $sql->num_rows;
+        if ($row_cnt > 0) {
+            $row = $sql->fetch_array(MYSQLI_ASSOC);
+            echo json_encode($row);
+        } else {
+            echo json_encode(2);
+        }
     }
 
 }
