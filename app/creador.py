@@ -24,6 +24,8 @@ with open("app/credentials.inc", "r", encoding='ascii') as connection_file:
                 else:
                     credentials[key] = word.split("\"")[1]
 
+credentials["table"] = sys.argv[3]
+
 
 conn = mysql.connector.connect(
         host=credentials["host"],
