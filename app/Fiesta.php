@@ -71,8 +71,28 @@ class Fiesta {
         }
     }
 
+    public function setAsUsed($token) {
+        $secure_token = mysqli_real_escape_string($this->conn, $token);
+        $sql = $this->conn->query("UPDATE ".$this->party_name." SET usada=1 WHERE token='".$secure_token."' ");
+        if (!$sql) throw new \Exception("sql error: ".$this->conn->error);
+        return $this->conn->info;
+    }
+
+    public function deleteToken($token) {
+        $secure_token = mysqli_real_escape_string($this->conn, $token);
+        $sql = $this->conn->query("DELETE FROM ".$this->party_name." WHERE token='".$secure_token."' ");
+        if (!$sql) throw new \Exception("sql error: ".$this->conn->error);
+        return $sql;
+    }
+
+    public function toggleUsedStatus($token) {
+
+    }
+
 }
 $fdp = new Fiesta("vol2", "fdp", "fiestadelpolitecnico", "entradas", "localhost");
-$fdp->createQr("probando_1", "joaquin");
+$fdp->createQr("nueva_entrada", "joaquin");
 $fdp->getAllTickets();
+echo $fdp->setAsUsed("HNPBCJWOPEAAYPO");
+echo $fdp->deleteToken("FCSDNFZHEJIJRIF");
 ?>
