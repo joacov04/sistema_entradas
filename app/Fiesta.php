@@ -30,8 +30,21 @@ class Fiesta {
         return $statement->execute();
     }
 
-    // This shouldn't be calling a python script
+    /**
+     * Creates a QR ticket for $person_name
+     *
+     * Generates an image with the QR Ticket under qr/ directory,
+     * saves the name of owner and seller in the database and generates
+     * a random string token associated to the ticket, used value is set to 0
+     *
+     * @param string $person_name The name of the Ticket owner
+     *
+     * @param string $seller The system name whom sold the Ticket
+     *
+     */
     public function createQr($person_name, $seller) {
+
+        // This shouldn't be calling a python script
         $name = str_replace(' ', '_', $person_name);
         $ret = system('python3  app/creador.py '.$name.' '.$seller.' '.$this->party_name);
         return $ret;
@@ -40,15 +53,7 @@ class Fiesta {
     public function getAllTickets() {
         $sql = $this->conn->query("SELECT * FROM ".$this->party_name);
         while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
-            $nombre = $row['nombre'];
-            $token = $row['token'];
-            $vendedor = $row['vendedor'];
-            $usada = $row['usada'];
-
-            echo $nombre;
-            echo $token;
-            echo $usada;
-            echo $vendedor;
+            echo json_encode($row);
             echo PHP_EOL;
         }
 
