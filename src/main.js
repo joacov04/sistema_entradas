@@ -4,6 +4,7 @@ $(document).ready(function(){
         location.reload();
     });
 
+
     $(document).on("click", ".used_action", function() {
         //confirm prompt here
         let tr = $(this).parent().parent();
@@ -58,11 +59,13 @@ $(document).ready(function(){
     });
 
     $('#qr_icon').click(function() {
-        window.location.href = 'app/camera.php';
+        let party = window.location.href.split('?')[1];
+        window.location.href = 'app/camera.php?'+party;
     });
 
     $('#search_icon').click(function() {
-        window.location.href = 'app/buscar.php';
+        let party = window.location.href.split('?')[1];
+        window.location.href = 'app/buscar.php?'+party;
     });
 
     let maxField = 20; //Input fields increment limitation

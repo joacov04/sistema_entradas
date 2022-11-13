@@ -23,7 +23,19 @@
         </div>
 
         <div class="flex">
-            <a>FIESTA DEL POLI</a>
+            <a class="p_name">FIESTA DEL POLI</a>
+            <?php
+            include_once "app/Boliche.php";
+            include_once "app/credentials.inc";
+            $app = new Boliche($user, $pass, $base, $host);
+            $parties = $app->getAllParties();
+
+            foreach ($parties as $party) {
+                $showing_name = str_replace('_', ' ', $party[0]);
+                echo "<a href='index.php?party=".$party[0]."'>".$showing_name."</a>";
+            }
+
+            ?>
 
         </div>
 

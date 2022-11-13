@@ -4,6 +4,16 @@ $user = $_SERVER['PHP_AUTH_USER'];
 if ($user != 'joaquin' && $user != 'sopo') {
     header("Location: publicas.php", true, 301);
 }
+if(!isset($_GET['party'])) {
+    //not show
+    return 0;
+} else {
+    $party = $_GET['party'];
+    include_once "Fiesta.php";
+    include_once "credentials.inc";
+    $app = new Fiesta($party, $user, $pass, $base, $host);
+}
+
 
 ?>
 <html lang="en">
@@ -49,9 +59,11 @@ if ($user != 'joaquin' && $user != 'sopo') {
                     </tr>
                 </thead>
                 <tbody>
+
                 <?php
-                    include("backend_buscar.php");
+                $tickets = $app->getAllTickets();
                 ?>
+
                 </tbody>
             </table>
 

@@ -1,3 +1,14 @@
+<?php
+if(!isset($_GET['party'])) {
+    //not show
+    return 0;
+} else {
+    $party = $_GET['party'];
+    include_once "app/Fiesta.php";
+    include_once "app/credentials.inc";
+    $app = new Fiesta($party, $user, $pass, $base, $host);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

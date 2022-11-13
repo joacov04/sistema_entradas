@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
     foreach($field_values_array as &$element) {
         $seller = $_SERVER['PHP_AUTH_USER'];
         $nombre = str_replace(' ', '_', $element);
-        system('python3  app/creador.py '.$nombre.' '.$seller);
+        $app->createQr($nombre, $seller);
     }
     if($handle = opendir('qr/')) {
         echo "<div class='downloads'>";

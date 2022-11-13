@@ -53,8 +53,27 @@ class Fiesta {
     public function getAllTickets() {
         $sql = $this->conn->query("SELECT * FROM ".$this->party_name);
         while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
-            echo json_encode($row);
-            echo PHP_EOL;
+            $nombre = $row['nombre'];
+            $token = $row['token'];
+            $vendedor = $row['vendedor'];
+            if($row['usada'] == '1') {
+                $usada = 'SI';
+                $accion = 'NO Usada';
+            } else {
+                $usada = 'NO';
+                $accion = 'Usada';
+            }
+
+            echo "<tr>";
+            echo "<td>".$nombre."</td>";
+            echo "<td>".$token."</td>";
+            echo "<td>".$usada."</td>";
+            echo "<td>".$vendedor."</td>";
+            if($_SERVER['PHP_AUTH_USER'] == 'joaquin' || $_SERVER['PHP_AUTH_USER'] == 'sopo' ) {
+                echo "<td><a class='accion used_action'>".$accion."</a></td>";
+                echo "<td><a class='accion delete_action'>Eliminar</a></td>";
+            }
+            echo "</tr>";
         }
     }
 
@@ -104,13 +123,4 @@ class Fiesta {
     }
 }
 
-$fdp = new Fiesta("vol2", "fdp", "fiestadelpolitecnico", "entradas", "localhost");
-$fdp->createQr("nueva_entrada", "joaquin");
-$fdp->getAllTickets();
-echo $fdp->setAsUsed("HNPBCJWOPEAAYPO");
-echo PHP_EOL;
-echo $fdp->deleteToken("FCSDNFZHEJIJRIF");
-echo PHP_EOL;
-echo $fdp->toggleUsedStatus("YCMVDPORPCJGWEO");
-echo PHP_EOL;
 ?>
