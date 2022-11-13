@@ -66,8 +66,10 @@ class Fiesta {
         if ($row_cnt > 0) {
             $row = $sql->fetch_array(MYSQLI_ASSOC);
             echo json_encode($row);
+            return json_encode($row);
         } else {
             echo json_encode(2);
+            return json_encode(2);
         }
     }
 
@@ -86,13 +88,29 @@ class Fiesta {
     }
 
     public function toggleUsedStatus($token) {
+        $secure_token = mysqli_real_escape_string($this->conn, $token);
+        $isUsed = json_decode($this->searchToken($secure_token), true)["usada"];
+
+        if(!$isUsed) {
+            $sql = $this->conn->query("UPDATE ".$this->party_name." SET usada=1 WHERE token='".$secure_token."' ");
+            if (!$sql) throw new \Exception("sql error: ".$this->conn->error);
+            return $this->conn->info;
+        } else {
+            $sql = $this->conn->query("UPDATE ".$this->party_name." SET usada=0 WHERE token='".$secure_token."' ");
+            if (!$sql) throw new \Exception("sql error: ".$this->conn->error);
+            return $this->conn->info;
+        }
 
     }
-
 }
+
 $fdp = new Fiesta("vol2", "fdp", "fiestadelpolitecnico", "entradas", "localhost");
 $fdp->createQr("nueva_entrada", "joaquin");
 $fdp->getAllTickets();
 echo $fdp->setAsUsed("HNPBCJWOPEAAYPO");
+echo PHP_EOL;
 echo $fdp->deleteToken("FCSDNFZHEJIJRIF");
+echo PHP_EOL;
+echo $fdp->toggleUsedStatus("YCMVDPORPCJGWEO");
+echo PHP_EOL;
 ?>
