@@ -1,4 +1,5 @@
 # Sistema de entradas con códigos QR
+![image](https://user-images.githubusercontent.com/45110242/203401154-a3090563-6c59-463d-849f-ec6591df9e54.png)
 
 ## Descripción
 Sistema simple de control de asistencia para eventos
