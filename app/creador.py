@@ -50,7 +50,7 @@ def overlay(qr_path, token):
 
     qr_img = Image.open(qr_path)
     (qr_width, qr_heigth) = qr_img.size
-    heigth_to_paste = int(background_heigth/2.6)
+    heigth_to_paste = int(background_heigth/2.7)
     width_to_paste = int((background_width-qr_width)/2)
 
     background.paste(qr_img, (width_to_paste, heigth_to_paste))
