@@ -44,6 +44,7 @@ $host='localhost';
 $pass='password';
 $base='entradas';
 $table='fdp';
+$PRICE=1000;
 ?>
 ```
 
