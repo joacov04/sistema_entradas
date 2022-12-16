@@ -13,8 +13,8 @@ $sql = $conn->query("SELECT COUNT(*) AS Total FROM ".$table);
 $row_cnt = $sql->num_rows;
 while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
     $total_entradas = $row['Total'];
-    $total_plata = number_format(((int)$total)*$PRICE);
-    $margen = (int)$total*$PRICE*$MARGIN_PERCENT;
+    $total_plata = "$".number_format(((int)$total_entradas)*$PRICE);
+    $margen = "$".number_format((int)$total_entradas*$PRICE*$MARGIN_PERCENT);
 
     $info = [
         "entradas"  => $total_entradas,
