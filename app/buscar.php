@@ -47,15 +47,15 @@ if ($user != 'joaquin' && $user != 'payo') {
             <div id="admin_info">
                 <div class="stats">
                     <h2 style="margin-top: 0">Entradas </h2>
-                    <h2 id="total" style="margin-top: 0">300</h2>
+                    <h2 id="total" style="margin-top: 0">0</h2>
                 </div>
                 <div class="stats">
                     <h2>Total </h2>
-                    <h2 id="money">$300,000</h2>
+                    <h2 id="money">0</h2>
                 </div>
                 <div class="stats">
                     <h2>Margen </h2>
-                    <h2 id="margin">$30,000</h2>
+                    <h2 id="margin">0</h2>
                 </div>
             </div>
             </div>
