@@ -7,7 +7,7 @@ $row_cnt = $sql->num_rows;
 while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
     $total = $row['Total'];
     $vendedor = $row['vendedor'];
-    $total_plata = number_format(((int)$total)*1000);
+    $total_plata = number_format(((int)$total)*$PRICE);
 
     echo "<tr>";
     echo "<td>".$vendedor."</td>";
