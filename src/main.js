@@ -1,5 +1,29 @@
 $(document).ready(function(){
 
+
+    let url = window.location.href.split('/');
+    let actual_file = url[url.length-1];
+
+    if(actual_file == "buscar.php") {
+        $.ajax({
+            type: 'GET',
+            dataType: 'json',
+            url: 'get_main_info.php',
+            data: {},
+            success: function(data) {
+                console.log(data);
+                console.log($('#total')[0]);
+
+                $('#total')[0].innerText = data.entradas;
+                $('#money')[0].innerText = data.plata;
+                $('#margin')[0].innerText = data.margen;
+            },
+            error: function(err) {
+                console.log(err);
+            }
+        });
+    }
+
     $('#sync').click(function() {
         location.reload();
     });

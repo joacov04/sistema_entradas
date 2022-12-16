@@ -23,11 +23,40 @@
  */
 }
 
+#admin_padre {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#tabla_ventas {
+    flex-wrap: nowrap;
+}
+
+#admin_info {
+    padding-left: 10px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-self: flex-start;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+
 #xd {
     display: none;
     z-index: 1;
 
 }
+
 
 #sync {
     float: right;
