@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 $user = $_SERVER['PHP_AUTH_USER'];
-if ($user != 'joaquin' && $user != 'sopo' && $user != 'juani') {
+if ($user != 'joaquin' && $user != 'payo') {
     header("Location: publicas.php", true, 301);
 }
 
@@ -26,9 +26,42 @@ if ($user != 'joaquin' && $user != 'sopo' && $user != 'juani') {
         <span class="material-symbols-outlined icons" id="arrow_back" onclick="window.location.href='../'">arrow_back</span>
         
         <div class="box">
+            <h2 class="title">Admin Panel</h2>
+            <div id="admin_padre">
+                <div id="tabla_ventas">
+                <table id="sales">
+                    <thead>
+                        <tr>
+                            <th>Vendedor</th>
+                            <th>Cantidad</th>
+                            <th>Total $</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            include("stonks.php");
+                        ?>
+                    </tbody>
+                </table>
+                </div>
+            <div id="admin_info">
+                <div class="stats">
+                    <h2 style="margin-top: 0">Entradas </h2>
+                    <h2 id="total" style="margin-top: 0">300</h2>
+                </div>
+                <div class="stats">
+                    <h2>Total </h2>
+                    <h2 id="money">$300,000</h2>
+                </div>
+                <div class="stats">
+                    <h2>Margen </h2>
+                    <h2 id="margin">$30,000</h2>
+                </div>
+            </div>
+            </div>
             <table id="names">
             <div>
-                <h2 class="title">Buscar - Admin Panel</h2>
+                <h2 class="title">Buscar</h2>
                 <span class="material-symbols-outlined icons" id="sync">sync</span>
             </div>
                 <input type="text" id="search_name" onkeyup="nameSearch($('#search_select').val())" placeholder="Buscar">
