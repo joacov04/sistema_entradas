@@ -2,7 +2,7 @@
 include_once "connect.php";
 
 
-$sql = $conn->query("SELECT vendedor, COUNT(*) AS Total FROM ".$table." GROUP BY vendedor ORDER BY Total");
+$sql = $conn->query("SELECT vendedor, COUNT(*) AS Total FROM ".$table." GROUP BY vendedor ORDER BY Total DESC");
 $row_cnt = $sql->num_rows;
 while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
     $total = $row['Total'];
