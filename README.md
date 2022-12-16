@@ -11,6 +11,7 @@ Sistema simple de control de asistencia para eventos
 
 - [ ] poder cambiar imagen de fondo desde la pagina + varias tablas para varios dias
 - [ ] que la tabla la cree directamente el programa los directorios tmabien
+- [ ] que el nombre de la tabla de la bd sea el titulo de la pagina para comodidd con muchos eventos
 
 ## Instalacion en servidor (linux):
 **Requerimientos**: 
