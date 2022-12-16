@@ -7,7 +7,6 @@ if ($user != 'joaquin' && $user != 'payo') {
 }
 
 $MARGIN_PERCENT = 0.1;
-$PRICE = 1000;
 
 $sql = $conn->query("SELECT COUNT(*) AS Total FROM ".$table);
 $row_cnt = $sql->num_rows;

@@ -1,5 +1,6 @@
 <?php
 include "credentials.inc";
+$PRICE=1000;
 
 // Create connection
 $conn = new mysqli($host, $user, $pass, $base);
