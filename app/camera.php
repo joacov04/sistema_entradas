@@ -1,3 +1,7 @@
+
+<?php
+include "credentials.inc";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +14,7 @@
     <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>Escanear QR</title>
+    <title><?php echo $table; ?> - Escanear</title>
 </head>
 <body class="flex">
     <span class="material-symbols-outlined icons" id="arrow_back" onclick="window.location.href='../'">arrow_back</span>
