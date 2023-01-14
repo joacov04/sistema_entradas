@@ -35,7 +35,7 @@ if ($user != 'joaquin' && $user != 'feli') {
                         <tr>
                             <th>Vendedor</th>
                             <th>Cantidad</th>
-                            <th>Total $</th>
+                            <th>Total (comision descontada)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -55,7 +55,7 @@ if ($user != 'joaquin' && $user != 'feli') {
                     <h2 id="money">0</h2>
                 </div>
                 <div class="stats">
-                    <h2>Margen </h2>
+                    <h2>Fee publicas </h2>
                     <h2 id="margin">0</h2>
                 </div>
             </div>

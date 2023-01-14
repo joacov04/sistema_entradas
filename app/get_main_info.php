@@ -8,12 +8,12 @@ if ($user != 'joaquin' && $user != 'payo') {
 
 $MARGIN_PERCENT = 0.1;
 
-$sql = $conn->query("SELECT COUNT(*) AS Total FROM ".$table);
+$sql = $conn->query("SELECT sum(cantidad) AS Total FROM bios_tokens");
 $row_cnt = $sql->num_rows;
 while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
     $total_entradas = $row['Total'];
     $total_plata = "$".number_format(((int)$total_entradas)*$PRICE);
-    $margen = "$".number_format((int)$total_entradas*$PRICE*$MARGIN_PERCENT);
+    $margen = "$".number_format((int)$total_entradas*$FEE);
 
     $info = [
         "entradas"  => $total_entradas,
