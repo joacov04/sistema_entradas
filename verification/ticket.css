@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@900&display=swap');
 @font-face {
     font-family: Phonk;
-    src: url("../PhonkRegularDEMO.otf") format("opentype");
+    src: url("PhonkRegularDEMO.otf") format("opentype");
 }
 
 :root {
@@ -20,7 +20,7 @@ html {
 
 body {
     /*background-color: var(--backcolor1);*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../background1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("background1.jpg");
     color: var(--color2);
     font-family: "Montserrat", sans-serif;
     display: flex;
