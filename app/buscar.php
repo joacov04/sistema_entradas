@@ -2,7 +2,7 @@
 <?php
 include "credentials.inc";
 $user = $_SERVER['PHP_AUTH_USER'];
-if ($user != 'joaquin' && $user != 'payo') {
+if ($user != 'joaquin' && $user != 'feli') {
     header("Location: publicas.php", true, 301);
 }
 
