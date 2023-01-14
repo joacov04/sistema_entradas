@@ -201,6 +201,20 @@ input[type=text] {
     font-weight: 600;
     font-size: 18px;;}
 
+
+
+input[type=number] {
+    padding: 20px;
+    width: 150px;
+    border: none;
+    background: var(--color3);
+    border-radius: 10px;
+    margin: 5px;    
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;;}
+
 ::placeholder {
     font-family: "Montserrat", sans-serif;
     color: black;

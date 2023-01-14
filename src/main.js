@@ -89,6 +89,20 @@ $(document).ready(function(){
         window.location.href = 'app/buscar.php';
     });
 
+
+    function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+            $temp.remove();
+    }
+    $('#link-btn').click(function() {
+        copyToClipboard('#link')
+    });
+    
+
+
     let maxField = 20; //Input fields increment limitation
     let addButton = $('.add_button'); //Add button selector
     let wrapper = $('.field_wrapper'); //Input field wrapper
