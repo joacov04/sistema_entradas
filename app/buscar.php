@@ -35,7 +35,7 @@ if ($user != 'joaquin' && $user != 'feli') {
                         <tr>
                             <th>Vendedor</th>
                             <th>Cantidad</th>
-                            <th>Total (comision descontada)</th>
+                            <th>Total</th>
                         </tr>
                     </thead>
                     <tbody>
