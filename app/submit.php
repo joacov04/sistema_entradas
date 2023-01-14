@@ -35,7 +35,7 @@ if(isset($_POST['cant'])){
 
     echo "<div class='downloads'>";
     echo "<a id='link-btn' class='clipboard qrs' style='justify-content: center'>Copiar link (".$secure_cant.")</a>";
-    echo "<p id='link' >http://190.247.191.120/entradas/ticket.php?token=".$rand_token."</p>";
+    echo "<p id='link' >https://biosproducciones.jva.com.ar/ticket.php?token=".$rand_token."</p>";
     echo "</div>";
     
     //cleanDir('qr/');
