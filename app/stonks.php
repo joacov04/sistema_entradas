@@ -2,7 +2,7 @@
 include_once "connect.php";
 
 
-$sql = $conn->query("select vendedor, count(*) as Total from bios_persons join bios_tokens on bios_persons.token=bios_tokens.token group by vendedor order by Total desc;");
+$sql = $conn->query("select vendedor, sum(cantidad) as Total from bios_tokens group by vendedor order by Total desc;");
 $row_cnt = $sql->num_rows;
 while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
     $total = $row['Total'];
