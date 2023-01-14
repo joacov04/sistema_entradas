@@ -43,16 +43,9 @@ if ($row_cnt > 0) {
         <h1>BIOS</h1>
         <h2>REENCUENTRO DE LA COSTA</h2>
         <div>
-            <h3>
-                SAB 28
-                <span style="font-family: Roboto">/</span>
-                1
-            </h3>
+            <h3>SAB 28/1</h3>
             <h3>ROSARIO</h3>
-            <h3>
-                <span style="font-family: Roboto">+</span>
-                18
-            </h3>
+            <h3>+18</h3>
         </div>
     </section>
 
@@ -75,7 +68,7 @@ if(!$usado) { ?>
         
 
 
-        <button type="submit" id="submit" name='submit' class="registerbtn"><b>Enviar</b></button>
+        <button type="submit" id="submit" name='submit' class="registerbtn"><b>Generar QR</b></button>
         </form>
     </section>
     
@@ -143,7 +136,10 @@ if(!$usado) { ?>
             Evento solo para mayores de 18 años. 
         </p>
         <p>
-            Metropolitano Rosario, Ingreso por esquina Echeverria y central argenitno.
+            Metropolitano Rosario
+        </p>
+        <p>
+            Ingreso por esquina Echeverria y Central Argentino (Lotus).
         </p>
     </section>
     

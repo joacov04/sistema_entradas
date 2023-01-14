@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@900&display=swap');
 @font-face {
-    font-family: Phonk;
-    src: url("PhonkRegularDEMO.otf") format("opentype");
+    font-family: Akira;
+    src: url("AkiraExpandedDemo.otf") format("opentype");
 }
 
 :root {
     --color1: rgb(195, 195, 195);
-    --color2: rgb(72, 191, 239);
-    --darkcolor1: ;
+    --color2: rgb(192, 120, 5);
+    --lightcolor: rgb(192, 142, 5);
+    --darkcolor: rgb(192, 90, 5);
     --backcolor1: rgb(15, 15, 15);
     --backcolor2: ;
 }
@@ -19,8 +20,10 @@ html {
 
 
 body {
-    /*background-color: var(--backcolor1);*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("background1.jpg");
+    background-color: var(--backcolor1);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("background15.jpg");
+    background-repeat: no-repeat;
+    background-size: 120%;
     color: var(--color2);
     font-family: "Montserrat", sans-serif;
     display: flex;
@@ -31,14 +34,29 @@ body {
   }
 
 #header {
-    font-family: "Phonk", sans-serif;
+    font-family: "Akira", sans-serif;
     /*background-color: rgba(255, 255, 255, 0.5);*/
 }
 
 #header h1 {
-    font-size: 120px;
+    font-size: 110px;
     margin-top: 50px;
     margin-bottom: 0px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 400%;
+    animation: move 7s ease infinite;
+    background-image: linear-gradient( 68.7deg,  var(--lightcolor) 13.2%, var(--color2) 29.8%, var(--darkcolor) 48.9%, var(--color2) 68.2%, var(--darkcolor) 86.4% );}
+
+@keyframes move {
+    0%,100%{
+        background-position: 200% 0%;
+    }
+
+    50%{
+        background-position: 0% 200%;
+    }
 }
 
 #header h2 {
@@ -77,7 +95,7 @@ input {
     border: none;
     outline: 2px solid var(--color1);
     background: transparent;
-    transition: all 0.05s ease 0s;
+    transition: all 0.1s ease 0s;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -89,7 +107,7 @@ input:focus {
     outline: 3px solid var(--color2);
   }
 
-button, input[type=submit]  {
+button  {
     padding: 9px 25px;
     width: 86%;
     height: 50px;
