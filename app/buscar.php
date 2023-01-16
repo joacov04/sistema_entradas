@@ -78,6 +78,8 @@ if ($user != 'joaquin' && $user != 'feli') {
                         <th>Token</th>
                         <th>Usada</th>
                         <th>Vendedor</th>
+                        <th>Telefono</th>
+                        <th>Mail</th>
                         <th>Marcar como</th>
                         <th>Eliminar</th>
                     </tr>
