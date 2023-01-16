@@ -3,6 +3,15 @@ $(document).ready(function(){
 
     let url = window.location.href.split('/');
     let actual_file = url[url.length-1];
+    $('input[type=checkbox]').change(function() {
+        console.log(this.value);
+        if($('td:nth-child('+this.value+'),th:nth-child('+this.value+')').is(':visible') ) {
+            $('td:nth-child('+this.value+'),th:nth-child('+this.value+')').hide();
+        } else {
+            $('td:nth-child('+this.value+'),th:nth-child('+this.value+')').show();
+        }
+
+    });
 
     if(actual_file == "buscar.php") {
         $.ajax({
