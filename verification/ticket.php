@@ -2,8 +2,8 @@
 include_once "../app/connect.php";
 
 
-if( 1!=1 && (!isset($_GET['token']))) {
-    echo "Sorry. Something went wrong.";
+if((!isset($_GET['token']))) {
+    echo "No se encontro un link asociado.";
 } else {
 
 $secure_token = mysqli_real_escape_string($conn, $_GET['token']);
@@ -27,6 +27,9 @@ if ($row_cnt > 0) {
         }
 
     }
+} else {
+    echo "Link invalido.";
+    return;
 }
 ?>
 
