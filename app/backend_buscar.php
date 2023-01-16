@@ -24,8 +24,8 @@ while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
     echo "<td>".$usada."</td>";
     echo "<td>".$vendedor."</td>";
     if($_SERVER['PHP_AUTH_USER'] == 'joaquin' || $_SERVER['PHP_AUTH_USER'] == 'feli') {
-        echo "<td>".$mail."</td>";
         echo "<td>".$tel."</td>";
+        echo "<td>".$mail."</td>";
         echo "<td><a class='accion used_action'>".$accion."</a></td>";
         echo "<td><a class='accion delete_action'>Eliminar</a></td>";
     }
