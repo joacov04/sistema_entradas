@@ -19,9 +19,12 @@ html {
 
 
 
-body {
+body{
     background-color: var(--backcolor1);
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("background15.jpg");
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    
     background-repeat: no-repeat;
     background-size: 120%;
     color: var(--color2);
