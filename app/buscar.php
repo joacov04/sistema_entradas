@@ -58,6 +58,10 @@ if ($user != 'joaquin' && $user != 'feli') {
                     <h2>Fee publicas </h2>
                     <h2 id="margin">0</h2>
                 </div>
+                <div class="stats">
+                    <h2>Neto </h2>
+                    <h2 id="neto">0</h2>
+                </div>
             </div>
             </div>
             <table id="names">

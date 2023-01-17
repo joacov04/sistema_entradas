@@ -17,6 +17,7 @@ $(document).ready(function(){
                 $('#total')[0].innerText = data.entradas;
                 $('#money')[0].innerText = data.plata;
                 $('#margin')[0].innerText = data.margen;
+                $('#neto')[0].innerText = data.neto;
             },
             error: function(err) {
                 console.log(err);
