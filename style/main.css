@@ -23,12 +23,6 @@
  */
 }
 
-#check {
-    display: flex;
-    border: 1px solid red;
-    justify-content: space-between;
-}
-
 #admin_padre {
     display: flex;
     flex-wrap: nowrap;

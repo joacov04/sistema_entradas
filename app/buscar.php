@@ -72,16 +72,6 @@ if ($user != 'joaquin' && $user != 'feli') {
                     <option value="3">Vendedor</option>
                     <option value="2">Usada</option>
                 </select>
-                <br>
-                <h3>Ocultar:</h3>
-                <div id="#check">
-                    <input value="1" type="checkbox">Nombre</input>
-                    <input value="2" type="checkbox">Token</input>
-                    <input value="3" type="checkbox">Usada</input>
-                    <input value="4" type="checkbox">Vendedor</input>
-                    <input value="5" type="checkbox">Telefono</input>
-                    <input value="6" type="checkbox">Mail</input>
-                </div>
                 <thead>
                     <tr>
                         <th>Nombre</th>
