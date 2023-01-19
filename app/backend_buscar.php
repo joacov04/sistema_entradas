@@ -16,17 +16,6 @@ while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
     } else {
         $usada = 'NO';
         $accion = 'Usada';
-            $nombre = $row['nombre'];
-            $token = $row['qr_token'];
-            $vendedor = $row['vendedor'];
-            $mail = $row['mail'];
-            $tel = $row['tel'];
-            if($row['usada'] == '1') {
-                $usada = 'SI';
-                $accion = 'NO Usada';
-            } else {
-                $usada = 'NO';
-                $accion = 'Usada';
             }
 
     if($row['vendedor'] == $_SERVER['PHP_AUTH_USER'] || $_SERVER['PHP_AUTH_USER'] == 'joaquin' || $_SERVER['PHP_AUTH_USER'] == 'feli' ) {
