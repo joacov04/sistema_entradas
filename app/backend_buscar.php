@@ -16,7 +16,7 @@ while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
     } else {
         $usada = 'NO';
         $accion = 'Usada';
-            }
+    }
 
     if($row['vendedor'] == $_SERVER['PHP_AUTH_USER'] || $_SERVER['PHP_AUTH_USER'] == 'joaquin' || $_SERVER['PHP_AUTH_USER'] == 'feli' ) {
     echo "<tr>";
@@ -32,6 +32,7 @@ while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
     }
     echo "</tr>";
 
+    }
 }
 
 ?>
