@@ -5,6 +5,7 @@ include_once "connect.php";
 $sql = $conn->query("select * from bios_persons join bios_tokens on bios_persons.token=bios_tokens.token;");
 $row_cnt = $sql->num_rows;
 while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
+    if($_SERVER['PHP_AUTH_USER'] == 'joaquin' || $_SERVER['PHP_AUTH_USER'] == 'feli') {
     $nombre = $row['nombre'];
     $token = $row['qr_token'];
     $vendedor = $row['vendedor'];
@@ -16,6 +17,23 @@ while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
     } else {
         $usada = 'NO';
         $accion = 'Usada';
+    }
+    } else {
+        if($row['vendedor'] == $_SERVER['PHP_AUTH_USER']) {
+            $nombre = $row['nombre'];
+            $token = $row['qr_token'];
+            $vendedor = $row['vendedor'];
+            $mail = $row['mail'];
+            $tel = $row['tel'];
+            if($row['usada'] == '1') {
+                $usada = 'SI';
+                $accion = 'NO Usada';
+            } else {
+                $usada = 'NO';
+                $accion = 'Usada';
+            }
+
+        }
     }
 
     echo "<tr>";
