@@ -136,10 +136,10 @@ if(!$usado) { ?>
 
     <section id="information">
         <p>
-            Evento solo para mayores de 18 años. 
+            Evento exclusivo para mayores de 18 años. 
         </p>
         <p>
-            Metropolitano Rosario
+            Metropolitano Rosario.
         </p>
         <p>
             Ingreso por esquina Echeverria y Central Argentino (Lotus).
