@@ -2,7 +2,7 @@
 include_once "connect.php";
 
 $user = $_SERVER['PHP_AUTH_USER'];
-if ($user != 'joaquin' && $user != 'payo') {
+if ($user != 'joaquin' && $user != 'feli') {
     return;
 }
 
