@@ -65,7 +65,7 @@ if(!$usado) { ?>
         <form method="post">
         <h2>Entrada <?php echo $x+1;?></h2>
             <input placeholder="Nombre y apellido" name="name[]" id="name" required>      
-            <input placeholder="Email" name="email[]" id="email" required>      
+            <input type="email" placeholder="Email" name="email[]" id="email" required>      
             <input placeholder="Teléfono" name="tel[]" id="tel" required>      
         <?php $x++;} ?>
         
