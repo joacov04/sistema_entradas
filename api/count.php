@@ -2,8 +2,8 @@
 include_once "../app/connect.php";
 
 
-$cant_query = $conn->query("SELECT * FROM ".$table);
-$total_count = $cant_query->num_rows;
+$cant_query = $conn->query("SELECT sum(cantidad) AS Total FROM bios_tokens");
+$total_count = $cant_query->fetch_assoc();
 
-echo $total_count;
+echo $total_count['Total'];
 ?>
