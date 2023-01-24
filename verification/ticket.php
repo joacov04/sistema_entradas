@@ -123,6 +123,7 @@ if(!$usado) { ?>
         <div>
             <h4><?php echo $nombre[$z-1];?></h4>
             <img src="<?php echo $qr; ?>"/>
+            <p>Válido hasta las 2:00 AM</p>
         <br><br><br><br>
 
         </div>
