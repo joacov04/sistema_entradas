@@ -118,6 +118,23 @@ if(!$usado) { ?>
         <h1>Entradas</h1>
         <?php $z=0; while($z < $cantidad) { 
         $qr = "https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=".$qr_token[$z]."&chld=L|1";
+        $to = $email[$z]; 
+        $subject = 'BIOS - Reencuentro de la costa';
+        $headers = "From: BIOS Producciones <BIOS@jva.com.ar>"."\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+        $message = "
+        <h2>BIOS - Tu entrada</h2>
+        <p>Hola ".$nombre[$z].", Gracias por tu compra! Tu QR fue creado correctamente.</p>
+
+        <p>Te esperamos el 28/1!</p>
+        <img src='https://chart.googleapis.com/chart?chs=250x250&amp;cht=qr&amp;chl=".$qr_token[$z]."&amp;chld=L|1'>
+        <p>Metropolitano Rosario - Ingreso por esquina Echeverria y Central Argentino (Lotus)</p>
+        ";
+
+        mail($to, $subject, $message, $headers);
+
         $z++; 
         ?>
         <div>
