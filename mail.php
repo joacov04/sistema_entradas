@@ -6,7 +6,7 @@ $quer = "SELECT * FROM bios_persons";
 $sql = $conn->query($quer);
 $row_cnt = $sql->num_rows;
 while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
-    $email = $row['email'];
+    $email = $row['mail'];
     $qr_token = $row['qr_token'];
 
     $to = $email; 
