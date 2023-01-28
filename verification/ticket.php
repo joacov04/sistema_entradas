@@ -98,8 +98,25 @@ if(!$usado) { ?>
                 $secure_name = mysqli_real_escape_string($conn, $_POST['name'][$y]);
                 $secure_email = mysqli_real_escape_string($conn, $_POST['email'][$y]);
                 $secure_tel = mysqli_real_escape_string($conn, $_POST['tel'][$y]);
-
                 $qr_token = generateRandomString();
+                $to = $secure_email; 
+                $subject = 'BIOS - Reencuentro de la costa';
+                $headers = "From: BIOS Producciones <BIOS@jva.com.ar>"."\r\n";
+                $headers .= "MIME-Version: 1.0\r\n";
+                $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+                $message = "
+                <h2>BIOS - Tu entrada</h2>
+                <p>Hola ".$secure_name.", Gracias por tu compra! Tu QR fue creado correctamente.</p>
+
+                <p>Te esperamos el 28/1!</p>
+                <img src='https://chart.googleapis.com/chart?chs=250x250&amp;cht=qr&amp;chl=".$qr_token."&amp;chld=L|1'>
+                <p>Metropolitano Rosario - Ingreso por esquina Echeverria y Central Argentino (Lotus)</p>
+                ";
+
+                mail($to, $subject, $message, $headers);
+
+
 
                 $quer = "INSERT INTO bios_persons (token, tel, mail, nombre, qr_token, usada) VALUES ('".$secure_token."', ".(int)$secure_tel.", '".$secure_email."', '".$secure_name."', '".$qr_token."', 0)";
                 if($conn->query($quer) != TRUE) echo "Algo salio mal, contactate con nosotros." ;
@@ -116,26 +133,10 @@ if(!$usado) { ?>
     <?php if($usado) { ?>
     <section id="">
         <h1>Entradas</h1>
-        <?php $z=0; while($z < $cantidad) { 
-        $qr = "https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=".$qr_token[$z]."&chld=L|1";
-        $to = $email[$z]; 
-        $subject = 'BIOS - Reencuentro de la costa';
-        $headers = "From: BIOS Producciones <BIOS@jva.com.ar>"."\r\n";
-        $headers .= "MIME-Version: 1.0\r\n";
-        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-
-        $message = "
-        <h2>BIOS - Tu entrada</h2>
-        <p>Hola ".$nombre[$z].", Gracias por tu compra! Tu QR fue creado correctamente.</p>
-
-        <p>Te esperamos el 28/1!</p>
-        <img src='https://chart.googleapis.com/chart?chs=250x250&amp;cht=qr&amp;chl=".$qr_token[$z]."&amp;chld=L|1'>
-        <p>Metropolitano Rosario - Ingreso por esquina Echeverria y Central Argentino (Lotus)</p>
-        ";
-
-        mail($to, $subject, $message, $headers);
-
-        $z++; 
+<?php 
+        $z=0; while($z < $cantidad) { 
+                $qr = "https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=".$qr_token[$z]."&chld=L|1";
+                $z++; 
         ?>
         <div>
             <h4><?php echo $nombre[$z-1];?></h4>
