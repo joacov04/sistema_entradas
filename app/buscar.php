@@ -2,7 +2,7 @@
 <?php
 include "credentials.inc";
 $user = $_SERVER['PHP_AUTH_USER'];
-if ($user != 'joaquin' && $user != 'payo') {
+if ($user != 'joaquin' && $user != 'feli') {
     header("Location: publicas.php", true, 301);
 }
 
@@ -35,7 +35,7 @@ if ($user != 'joaquin' && $user != 'payo') {
                         <tr>
                             <th>Vendedor</th>
                             <th>Cantidad</th>
-                            <th>Total $</th>
+                            <th>Total</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -55,8 +55,12 @@ if ($user != 'joaquin' && $user != 'payo') {
                     <h2 id="money">0</h2>
                 </div>
                 <div class="stats">
-                    <h2>Margen </h2>
+                    <h2>Fee publicas </h2>
                     <h2 id="margin">0</h2>
+                </div>
+                <div class="stats">
+                    <h2>Neto </h2>
+                    <h2 id="neto">0</h2>
                 </div>
             </div>
             </div>
@@ -78,6 +82,8 @@ if ($user != 'joaquin' && $user != 'payo') {
                         <th>Token</th>
                         <th>Usada</th>
                         <th>Vendedor</th>
+                        <th>Telefono</th>
+                        <th>Mail</th>
                         <th>Marcar como</th>
                         <th>Eliminar</th>
                     </tr>

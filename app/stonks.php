@@ -2,12 +2,12 @@
 include_once "connect.php";
 
 
-$sql = $conn->query("SELECT vendedor, COUNT(*) AS Total FROM ".$table." GROUP BY vendedor ORDER BY Total DESC");
+$sql = $conn->query("select vendedor, sum(cantidad) as Total from bios_tokens group by vendedor order by Total desc;");
 $row_cnt = $sql->num_rows;
 while($row = $sql->fetch_array(MYSQLI_ASSOC)) {
     $total = $row['Total'];
     $vendedor = $row['vendedor'];
-    $total_plata = number_format(((int)$total)*$PRICE);
+    $total_plata = number_format(((int)$total)*($PRICE-$FEE));
 
     echo "<tr>";
     echo "<td>".$vendedor."</td>";

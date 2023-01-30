@@ -17,6 +17,7 @@ $(document).ready(function(){
                 $('#total')[0].innerText = data.entradas;
                 $('#money')[0].innerText = data.plata;
                 $('#margin')[0].innerText = data.margen;
+                $('#neto')[0].innerText = data.neto;
             },
             error: function(err) {
                 console.log(err);
@@ -88,6 +89,20 @@ $(document).ready(function(){
     $('#search_icon').click(function() {
         window.location.href = 'app/buscar.php';
     });
+
+
+    function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+            $temp.remove();
+    }
+    $('#link-btn').click(function() {
+        copyToClipboard('#link')
+    });
+    
+
 
     let maxField = 20; //Input fields increment limitation
     let addButton = $('.add_button'); //Add button selector
