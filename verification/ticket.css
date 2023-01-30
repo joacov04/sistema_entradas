@@ -160,3 +160,28 @@ button  {
     color: var(--color1);
     margin: 40px;
   }
+
+  
+  h1 {
+    font-size: 30px;
+  }
+
+
+  ul {
+    list-style-type: none;
+    text-align: left;
+    color: var(--color1);
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  li {
+    padding-left: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin: 0;
+    color: var(--color2)
+  }
