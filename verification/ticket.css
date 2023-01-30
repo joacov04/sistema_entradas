@@ -91,9 +91,11 @@ body{
 }
 
 #forms div {
+  padding: 50px 0px 350px 0px;
   display: flex;
   flex-direction: column;
   height: 100%;
+  margin: auto;
 }
 
 input {
