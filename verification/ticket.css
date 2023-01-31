@@ -112,7 +112,7 @@ input:focus {
 
 button  {
     padding: 9px 25px;
-    width: 86%;
+    width: 87%;
     height: 50px;
     font-size: 18px;
     font-weight: 600;
@@ -159,4 +159,34 @@ button  {
   #information {
     color: var(--color1);
     margin: 40px;
+  }
+
+  
+  h1 {
+    font-size: 30px;
+  }
+
+
+  ul {
+    list-style-type: none;
+    text-align: left;
+    color: var(--color1);
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  li {
+    padding-left: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin: 0;
+    color: var(--color2)
+  }
+
+  #login div {
+    margin-top: 100px;
+    margin-bottom: 291px;
   }
