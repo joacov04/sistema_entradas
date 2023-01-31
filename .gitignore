@@ -3,3 +3,4 @@ qrUsados/
 credentials.inc
 vendor/
 composer.phar
+composer.lock
