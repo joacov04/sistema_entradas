@@ -34,6 +34,7 @@ include "app/credentials.inc";
             </div>
             <div class="flex">
                 <input type="submit" name="submit" value="GENERAR">
+                <a> copiar link </a>
             </div>
         </form>
 
