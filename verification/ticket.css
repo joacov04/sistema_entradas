@@ -189,4 +189,6 @@ button  {
   #login div {
     margin-top: 100px;
     margin-bottom: 291px;
+    margin-left: auto;
+    margin-right: auto;
   }

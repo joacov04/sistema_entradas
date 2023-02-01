@@ -1,0 +1,68 @@
+
+  @media (min-width: 650px) {
+    body {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("background12.jpg");
+    }
+
+    #header h1 {
+      font-size: 130px
+    }
+
+    input {
+      width: 50%;
+      margin: 5px 100px 22px 100px;
+    }
+
+    button {
+      width: 52%;
+    }
+  }
+
+  @media (min-width: 1050px) {
+    body {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("background13.jpg");
+    }
+
+    #header h1 {
+      font-size: 140px
+    }
+
+    input {
+      width: 50%;
+      margin: 5px 100px 22px 100px;
+    }
+
+    button {
+      width: 52%;
+    }
+
+    
+    #login div {
+      background-color: rgba(0, 0, 0, 0.295);
+      width: 50%;
+      border: 2px solid var(--color1);
+      padding: 30px;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    #header h1 {
+      font-size: 170px
+    }
+
+    input {
+      width: 50%;
+      margin: 5px 90px 22px 90px;
+    }
+
+    button {
+      width: 53%;
+      margin-left: 90px;
+      margin-right: 90px;
+    }
+
+    #login div {
+      width: 40%;
+    }
+
+  }
