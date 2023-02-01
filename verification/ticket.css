@@ -175,6 +175,10 @@ button  {
     font-weight: 700;
   }
 
+  ul h1 {
+    color: var(--color2);
+  }
+
   li {
     padding-left: none;
     margin-top: 20px;

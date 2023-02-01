@@ -1,0 +1,45 @@
+
+  @media (min-width: 650px) {
+    #header h1 {
+      font-size: 130px
+    }
+  }
+
+  @media (min-width: 1050px) {
+    body {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("background12.jpg");
+    }
+
+    #header h1 {
+      font-size: 140px
+    }
+
+    #tragos div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #tragos div ul {
+        margin: 30px;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    #header h1 {
+      font-size: 170px
+    }
+
+    #tragos div ul {
+        margin: 70px;
+    }
+
+    ul {
+        font-size: 25px;
+    }
+
+    ul h1 {
+        font-size: 35px;
+    }
+
+  }
