@@ -1,0 +1,76 @@
+@media (min-width: 650px) {
+    body {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("background11.jpg");
+    }
+
+    #header h1 {
+      font-size: 130px
+    }
+
+    #header div {
+        width: 30%;
+    }
+
+    #header h3 {
+        font-size: 25px;
+    }
+
+    input {
+      width: 50%;
+      margin: 5px 100px 22px 100px;
+    }
+
+    button {
+      width: 52%;
+    }
+
+    
+    #download div {
+        width: 500px;
+    }
+  }
+
+  @media (min-width: 1050px) {
+
+    #header h1 {
+      font-size: 140px
+    }
+
+    #header div {
+        width: 20%;
+    }
+
+    #header h3 {
+        font-size: 28px;
+    }
+
+    input {
+      width: 40%;
+      margin: 5px 300px 22px 300px;
+    }
+
+    button {
+      width: 42%;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    #header h1 {
+      font-size: 170px
+    }
+
+    #header h2 {
+        font-size: 40px;
+      }
+
+    input {
+      width: 30%;
+      margin: 5px 300px 22px 300px;
+    }
+
+    button {
+      width: 32%;
+
+    }
+
+  }
