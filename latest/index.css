@@ -75,3 +75,8 @@ hr {
 .box div p {
     margin: 10px 10px 10px 0px;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
