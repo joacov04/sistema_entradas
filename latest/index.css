@@ -30,17 +30,13 @@ body {
     flex-direction: column;
 }
 
-.wrap {
-    flex-direction: wrap;
-}
-
-nav div {
+header div {
     background-color: var(--color2);
     padding: 20px;
     color: white;
 }
 
-nav div h1 {
+header div h1 {
     font-size: 30px;
 }
 
@@ -59,11 +55,14 @@ hr {
     margin-right: auto;
 }
 
+.party {
+    align-items: center;
+}
+
 .party .box {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     width: clamp(350px,50%,600px);
     border-radius: 15px;
-    margin: auto;
     align-items: center;
     text-align: left;
 }
