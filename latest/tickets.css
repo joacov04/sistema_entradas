@@ -1,0 +1,8 @@
+@import url(main.css);
+@import url(productos.css);
+
+a {
+  margin: 10px 0px;
+  justify-content: space-between;
+  text-align: center;
+}

@@ -12,7 +12,7 @@ body {
     background-color: white;
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
-    width: clamp(100%,500px);
+    width: clamp(100px,100%,500px);
     margin-left: auto;
     margin-right: auto;
 }

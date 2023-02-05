@@ -2,12 +2,10 @@
 
 :root {
     --color1: #6d6d6d;
-    --color2: #0b7b7b;
-    --lightcolor: #05c01b;
-    --darkcolor1: #075151;
-    --darkcolor2: #043636;
+    --color2: #2a5473;
+    --darkcolor1: #2c4861;
+    --darkcolor2: #23394c;
     --backcolor1: rgb(15, 15, 15);
-    --backcolor2: ;
 }
 
 html {
