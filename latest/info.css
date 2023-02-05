@@ -47,7 +47,7 @@ header div h1 {
 
 .clickable {
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     color: white;
     background-color: var(--darkcolor1);
     border: none;
@@ -69,10 +69,11 @@ header div h1 {
     text-align: left;
     margin: 10px auto;
     padding: 10px;
+    font-size: 20px;
 }
 
 .icon span {
-    font-size: 40px;
+    font-size: 44px;
 }
 
 #back {
@@ -80,9 +81,10 @@ header div h1 {
     width: 50%;
     margin: auto;
 }
+
 #back p {
     align-items: center;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 #back span {
@@ -101,8 +103,23 @@ header div h1 {
     border-radius: 5px;
     padding: 5px;
     width: clamp(50%,400px);
+    font-size: 18px;
 }
 
 #informacion h3 {
     margin: 15px 5px;
+    font-size: 22px;
+}
+
+#info-div {
+    width: clamp(200px,90%,500px);
+
+}
+
+#dates {
+    justify-content: space-between;
+}
+
+.date-son {
+    width: 50%;
 }
