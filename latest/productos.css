@@ -59,17 +59,6 @@
   .form input:valid + .label-name::after {
     transform: translateX(0%);
   }
-  
-  .icon {
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    width: clamp(200px,90%,500px);
-    border-radius: 15px;
-    align-items: center;
-    text-align: left;
-    margin: 10px auto;
-    font-size: 20px;
-}
 
-.icon span {
-    font-size: 25px;
-}
+
+  
