@@ -1,0 +1,60 @@
+@import url(main.css);
+@import url(info.css);
+
+html {
+    background-color: var(--color2);
+}
+
+body {
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    background-color: white;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+div {
+    width: 100%;
+}
+
+.material-symbols-outlined {
+    margin-right: clamp(100px,80%,500px);
+    font-size: 30px;
+}
+
+form {
+    height: 500px;
+    align-items: center;
+}
+
+
+input {
+    width: clamp(100px,80%,500px);
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    outline: 2px solid var(--color1);
+    background: transparent;
+    transition: all 0.1s ease 0s;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color1);
+    border-radius: 30px;
+  }
+
+
+input:focus {
+    outline: 3px solid var(--color2);
+  }
+
+#dropdown {
+    background-color: lightcoral;
+}
+
+.clickable {
+    width: 300px;
+    border-radius: 50px;
+}
