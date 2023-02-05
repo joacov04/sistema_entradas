@@ -8,17 +8,16 @@ html {
 body {
     margin-top: 30px;
     padding-top: 30px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     background-color: white;
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
+    width: clamp(100%,500px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
-div {
-    width: 100%;
-}
-
-.material-symbols-outlined {
+.backarrow {
     margin-right: clamp(100px,80%,500px);
     font-size: 30px;
 }

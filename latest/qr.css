@@ -1,0 +1,86 @@
+@import url(main.css);
+
+html {
+    background-color: var(--color2);
+}
+
+body {
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 450px;
+    background-color: white;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    width: clamp(100px,100%,500px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.backarrow {
+    margin-right: clamp(100px,80%,500px);
+    font-size: 30px;
+}
+
+.clickable {
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    color: white;
+    background-color: var(--darkcolor1);
+    border: none;
+    margin: 10px 5px;
+    padding: 10px;
+    border-radius: 5px;
+    width: clamp(200px,95%,525px);
+}
+
+.clickable:hover{
+    background-color: var(--darkcolor2);
+}
+
+p {
+    margin: 40px;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#center {
+    text-align: center;
+}
+
+.bt-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.fast-bt {
+    border: none;
+    color: rgb(232, 232, 232);
+    padding: 8px 45px;
+    border-radius: 50px;
+}
+
+#copy {
+    background-color: rgb(37, 91, 227);
+}
+
+#add {
+    background-color: rgb(145, 73, 176);
+}
+
+#share {
+    background-color: rgb(50, 148, 23);
+}
+
+.bt-icon {
+    font-size: 30px;
+}
+
+.clickable {
+    border-radius: 50px;
+    background-color: var(--color2);
+}
