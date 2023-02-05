@@ -39,6 +39,8 @@
     padding-top: 150px;
     width: 50%;
     margin: auto;
+    text-decoration: none;
+    color: inherit;
 }
 
 #back p {
@@ -82,3 +84,4 @@
 .date-son {
     width: 50%;
 }
+
