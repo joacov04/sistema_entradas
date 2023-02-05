@@ -57,12 +57,28 @@ a {
     margin: 10px;
 }
 
-.fast-bt {
+.modern-button {
+    display: inline-block;
+    border-radius: 40px;
+    padding: 8px 60px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
     border: none;
-    color: rgb(232, 232, 232);
-    padding: 8px 45px;
-    border-radius: 50px;
-}
+    outline: none;
+  }
+  
+  .modern-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  .modern-button:active {
+    transform: scale(1.05);
+  }
+  
 
 #copy {
     background-color: rgb(37, 91, 227);

@@ -23,19 +23,24 @@ body {
 
 .flex {
     display: flex;
-    justify-content: center;
 }
 
 .column {
     flex-direction: column;
 }
 
+
 header div {
     background-color: var(--color2);
-    padding: 20px;
+    padding: 20px clamp(0px,5%,900px);
+    ;
     color: white;
+    align-items: center;
+    justify-content: center;
+
 }
 
 header div h1 {
     font-size: 30px;
+    margin: auto;
 }

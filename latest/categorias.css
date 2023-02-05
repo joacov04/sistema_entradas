@@ -1,5 +1,9 @@
 @import url(main.css);
 
+.flex {
+  justify-content: center;
+}
+
 .form {
     display: inline;
     position: relative;
