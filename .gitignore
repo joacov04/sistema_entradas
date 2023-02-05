@@ -4,3 +4,4 @@ credentials.inc
 vendor/
 composer.phar
 composer.lock
+.htaccess
