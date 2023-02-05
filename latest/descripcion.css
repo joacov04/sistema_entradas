@@ -1,0 +1,12 @@
+@import url(main.css);
+@import url(info.css);
+
+h2 {
+    font-size: 25px;
+}
+
+#subtitle {
+    border: none;
+    text-align: left;
+    margin-left: 20px;
+}

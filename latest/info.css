@@ -53,23 +53,23 @@
     margin: 10px;
 }
 
-#informacion {
+.information {
     text-align: left;
     align-items: center;
 }
 
-#informacion p {
-    border: 1px solid var(--color1);
+.information p {
+    border-bottom: 1px solid var(--color1);
     margin: 5px;
     border-radius: 5px;
     padding: 5px;
     width: clamp(50%,400px);
-    font-size: 18px;
+    font-size: 16px;
 }
 
-#informacion h3 {
+.information h3 {
     margin: 15px 5px;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 #info-div {
@@ -77,7 +77,7 @@
 
 }
 
-#dates {
+.dates {
     justify-content: space-between;
 }
 
