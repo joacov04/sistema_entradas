@@ -17,11 +17,11 @@
         <div>
             <h1>Iniciar Sesión</h1>
             <form action="authenticate.php" method="post" id="frmLogin">
-                <input placeholder="Email" name="user" id="user" required>      
+                <input placeholder="Email" name="mail" id="mail" required>      
                 <input placeholder="Contraseña" name="pswd" id="pswd" required>            
-                <a href="google.com">Olvidé mi contraseña.</a>
                 <button type="submit" id="submit" class="registerbtn"><b>Entrar</b></button>
             </form>
+            <a href="google.com">Olvidé mi contraseña.</a>
         </div>    
         
         <hr>
