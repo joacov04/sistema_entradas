@@ -7,10 +7,11 @@ require_once('../JwtHandler.php');
 
 $mail = mysqli_real_escape_string($conn, $_POST['mail']);
 $pass = mysqli_real_escape_string($conn, $_POST['pass']);
+$encodedPass = md5($pass);
 
 $sql = $conn->query("SELECT * FROM bios_users WHERE mail='".$mail."'");
 $result = $sql->fetch_array(MYSQLI_ASSOC);
-if($result && $pass == $result['pass']) {
+if($result && $encodedPass == $result['pass']) {
     $jwt = New JwtHandler($secretJwt, $serverName); // imported from credentials.inc
     $data = [
         'name' => $result['nombre'],
