@@ -27,12 +27,12 @@
     align-items: center;
     text-align: left;
     margin: 10px auto;
-    padding: 10px;
+    padding: 20px 0px 10px 0px;
     font-size: 20px;
 }
 
 .icon span {
-    font-size: 44px;
+    font-size: 45px;
 }
 
 #back {

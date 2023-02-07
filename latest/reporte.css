@@ -1,0 +1,27 @@
+@import url(main.css);
+
+.row {
+    background-color: #7e8f9b;
+    border-radius: 15px;
+    margin: 15px 20px;
+    color: rgb(30, 30, 30);
+}
+
+.row:nth-child(even) {
+    background-color: #6d8ba0;
+}
+
+.row h3 {
+    font-size: 24px;
+}
+
+.row p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.resumen h1 {
+    font-size:30px;
+    color: rgb(30, 30, 30);
+
+}
