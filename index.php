@@ -1,5 +1,6 @@
 <?php
 include "app/credentials.inc";
+include 'api/validate.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
