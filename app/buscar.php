@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <?php
 include "credentials.inc";
+include "api/validate.php";
 $user = $_SERVER['PHP_AUTH_USER'];
-if ($user != 'joaquin' && $user != 'feli') {
-    header("Location: publicas.php", true, 301);
-}
+echo $data;
+//if ($user != 'joaquin' && $user != 'feli') {
+//    header("Location: publicas.php", true, 301);
+//}
 
 ?>
 <html lang="en">
