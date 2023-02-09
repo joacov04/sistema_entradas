@@ -10,7 +10,7 @@
 
 html {
     box-sizing: border-box;
-    height: 100%;
+    height: 100vh;
 }
 
 body {
@@ -29,16 +29,25 @@ body {
     flex-direction: column;
 }
 
+@keyframes down {
+    from {
+        transform: translateY(-80px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
 
 header div {
     background-color: var(--color2);
     padding: 20px clamp(0px,5%,900px);
-    ;
     color: white;
     align-items: center;
     justify-content: center;
-
+    animation: down 0.4s ease-out;
 }
+
 
 header div h1 {
     font-size: 30px;

@@ -3,8 +3,9 @@
 .row {
     background-color: #7e8f9b;
     border-radius: 15px;
-    margin: 15px 20px;
+    margin: 15px auto;
     color: rgb(30, 30, 30);
+    width: clamp(200px,90%,500px);
 }
 
 .row:nth-child(even) {
@@ -20,8 +21,51 @@
     font-weight: 500;
 }
 
-.resumen h1 {
-    font-size:30px;
-    color: rgb(30, 30, 30);
 
+.resumen h1 {
+    font-size:27px;
+    color: rgb(30, 30, 30);
+}
+
+table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+    font-size: 17px;
+    border-collapse: collapse;
+}
+
+tr {
+    background-color: #d3d6d8;
+}
+
+tr:nth-child(2n+1) {
+    background-color: #bccdd8;
+}
+
+td {
+    color: rgb(30, 30, 30);
+    font-weight: 500;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.titulo {
+    padding: 20px;
+}
+
+.titulo td {
+    font-weight: 700;
+    padding: 20px 15px;
+    background-color: #6d8ba0;
+    outline: solid 1px #6d8ba0;
+}
+
+@media (min-width: 690px) {
+    .resumen{
+        align-items: center;
+    }
 }
