@@ -24,6 +24,7 @@ hr {
     border-radius: 15px;
     align-items: center;
     text-align: left;
+    animation: amplify 0.4s ease;
 }
 
 .party .box h2 {

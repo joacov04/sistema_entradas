@@ -14,6 +14,7 @@
     padding: 10px;
     border-radius: 5px;
     width: clamp(200px,95%,525px);
+    transition: all 0.2s ease;
 }
 
 .clickable:hover{
@@ -29,6 +30,12 @@
     margin: 10px auto;
     padding: 20px 0px 10px 0px;
     font-size: 20px;
+    animation: amplify 0.4s ease;
+    transition: all 0.2s ease;
+}
+
+.icon:hover {
+    background-color: rgb(230, 230, 230);
 }
 
 .icon span {

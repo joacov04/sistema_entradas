@@ -1,8 +1,17 @@
 @import url(main.css);
 @import url(productos.css);
 
-a {
-  margin: 10px 0px;
+.box {
+  margin: 0px auto;
+  padding: 15px;
+  width: clamp(200px,90%,500px);
   justify-content: space-between;
   text-align: center;
+  transition: all 0.2s ease;
+  border-radius: 10px;
+  animation: amplify 0.4s ease;
+}
+
+.box:hover {
+    background-color: rgb(230, 230, 230);
 }

@@ -74,6 +74,10 @@
     font-size: 20px;
 }
 
+.icon {
+  animation: amplify 0.4s ease;
+}
+
 .icon span {
     font-size: 25px;
 }
