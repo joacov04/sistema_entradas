@@ -9,9 +9,6 @@ Sistema simple de control de asistencia para eventos
 
 ## ToDo List
 
-- [ ] poder cambiar imagen de fondo desde la pagina + varias tablas para varios dias
-- [ ] que la tabla la cree directamente el programa los directorios tmabien
-- [ ] que el nombre de la tabla de la bd sea el titulo de la pagina para comodidd con muchos eventos
 - [ ] (fix) en el admin panel, cuando se busca un nombre en las entradas, tambien se borra la tabla de vendeores.
 
 ## Instalacion en servidor (linux):
@@ -31,13 +28,22 @@ CREATE USER 'fdp'@'%' IDENTIFIED BY 'pass';
 ```
 GRANT ALL PRIVILEGES ON fdp.* to 'fdp'@'%';
 ```
-3. Crear la tabla en la base de datos
+3. Crear las tablas en la base de datos
 ```
-CREATE TABLE IF NOT EXISTS fdp (
-token text,
-nombre text,
-usada boolean,
-vendedor text);
+CREATE TABLE bios_persons(
+  nombre text, 
+  tel text,  
+  mail text, 
+  token text, 
+  usada tyniint(1), 
+  qr_token text
+);
+CREATE TABLE bios_tokens(
+  token text, 
+  cantidad int, 
+  vendedor text, 
+  datos_cargados tyniint(1)
+ );
 ```
 4. Crear un archivo `credentials.inc` para php-mysql con el siguiente formato
 ```
@@ -46,29 +52,18 @@ $user='fdp';
 $host='localhost';
 $pass='password';
 $base='entradas';
-$table='fdp';
+$table='bios_persons';
 $PRICE=1000;
 ?>
 ```
 
 
-## Instalacion de requqrimientos de python
-1. Ejecutar el siguiente comando
-```
-pip3 install -r requirements.txt
-```
-
-## Crear los directorios necesarios
-1. Ejecutar el siguiente comando
-```
-mkdir qr qrUsados
-```
-
 Si realizaste todos los pasos anteriores ya deberias poder utilizar el sistema.
 
 ## Para tener en cuenta
-1. Es buena práctica usar el mod de apache BasicAuth para que solo el administrador tenga acceso para crear entradas 
-y también para que no se puedan marcar como usadas las entradas antes del evento en cuestión.
+1. Se puede usar el mod de apache BasicAuth para que solo el administrador tenga acceso para crear entradas 
+y también para que no se puedan marcar como usadas las entradas antes del evento en cuestión. Con este mod, aparece quien vendió 
+cada entrada en la seccion de buscar
 
 2. Si se utiliza el spreadsheets de google docs, hay un archivo `api/count.php` para importar con la funcion `=IMPORTDATA()`
 y tener la cantidad de QR's que fueron generados. La url a utilizar seria `http://server.com/dir_entradas/api/count.php`
