@@ -3,9 +3,10 @@
 :root {
     --color1: #6d6d6d;
     --color2: #2a5473;
+    --color3: rgb(245, 245, 245);
     --darkcolor1: #2c4861;
     --darkcolor2: #23394c;
-    --backcolor1: rgb(15, 15, 15);
+    --backcolor1: rgb(35, 35, 35);
 }
 
 html {
@@ -42,7 +43,7 @@ body {
 header div {
     background-color: var(--color2);
     padding: 20px clamp(0px,5%,900px);
-    color: white;
+    color: var(--color3);
     align-items: center;
     justify-content: center;
     animation: down 0.4s ease-out;

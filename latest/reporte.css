@@ -61,7 +61,6 @@ td {
     font-weight: 700;
     padding: 20px 15px;
     background-color: #6d8ba0;
-    outline: solid 1px #6d8ba0;
 }
 
 @media (min-width: 690px) {

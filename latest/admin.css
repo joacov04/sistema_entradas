@@ -1,0 +1,104 @@
+@import url(main.css);
+
+body {
+    background-color: var(--backcolor1);
+}
+
+.row {
+    position: relative;
+    top: 15px;
+    border-radius: 15px;
+    margin: 0px auto;
+    color: var(--color3);
+    width: clamp(200px,90%,500px);
+    text-align: left;
+}
+
+.row:nth-child(1) h3 {
+    color: #43b858
+}
+
+.row:nth-child(2) h3 {
+    color: rgb(186, 35, 35)
+}
+
+.row:nth-child(3) h3 {
+    color: rgb(139, 139, 238)
+}
+
+.row h3 {
+    font-size: 28px;
+    margin: 15px 0px;
+}
+
+.row p {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 10px 0px;
+}
+
+.resumen h1 {
+    font-size:27px;
+    color: var(--color3);
+}
+
+table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+    font-size: 17px;
+    border-collapse: collapse;
+}
+
+tr {
+    background-color: var(--backcolor);
+}
+
+tr:nth-child(2n+1) {
+    background-color: #3b4145;
+}
+
+td {
+    color: rgb(30, 30, 30);
+    font-weight: 500;
+    padding: 20px 20px;
+    text-align: center;
+    color: var(--color3);
+}
+
+td:first-child {
+    font-weight:bold;
+}
+
+.titulo {
+    padding: 20px;
+}
+
+.titulo td {
+    font-weight: 700;
+    padding: 20px 15px;
+    background-color: var(--color2);
+    outline: solid 1px var(--color2);
+}
+
+@media (min-width: 750px) {
+    .resumen{
+        align-items: center;
+    }
+
+    .row h3 {
+        font-size: 35px;
+        margin: 15px 0px;
+    }
+    
+    .row p {
+        font-size: 22px;
+        font-weight: 800;
+        margin: 10px 0px;
+    }
+
+
+}
