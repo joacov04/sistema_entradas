@@ -14,14 +14,13 @@ el código QR en ese mismo link, también se le envía un email con el mismo QR 
 
 ## ToDo List
 
-- [ ] (fix) en el admin panel, cuando se busca un nombre en las entradas, tambien se borra la tabla de vendeores.
+- [ ] (fix) (js) en el admin panel, cuando se busca un nombre en las entradas, tambien se borra la tabla de vendeores.
 
 ## Instalacion en servidor (linux):
 **Requerimientos**: 
 - apache2
 - php, php-mysqli
 - mysql
-- python3
 
 ## Configuración de la base de datos (CLI):
 1. Abrir mysql como root, crear la base de datos 'entradas' y el usuario 'fdp'
@@ -29,11 +28,15 @@ el código QR en ese mismo link, también se le envía un email con el mismo QR 
 CREATE DATABASE entradas;
 CREATE USER 'fdp'@'%' IDENTIFIED BY 'pass';
 ```
-2. Darle todos los privilegios en nueve a nuevenue 
+2. Darle todos los privilegios en sus BD a fdp 
 ```
 GRANT ALL PRIVILEGES ON fdp.* to 'fdp'@'%';
 ```
-3. Crear las tablas en la base de datos
+3. Darle todos los privilegios en entradas a fdp
+```
+GRANT ALL PRIVILEGES ON entradas.* to 'fdp'@'%';
+```
+4. Crear las tablas en la base de datos
 ```
 CREATE TABLE bios_persons(
   nombre text, 
@@ -50,7 +53,7 @@ CREATE TABLE bios_tokens(
   datos_cargados tyniint(1)
  );
 ```
-4. Crear un archivo `credentials.inc` para php-mysql con el siguiente formato
+5. Crear un archivo `credentials.inc` para php-mysql con el siguiente formato
 ```
 <?php
 $user='fdp';
